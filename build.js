@@ -14,22 +14,35 @@ const modules = Object.entries(require('./package.json').devDependencies)
 const DOCS_PATH = path.join('.', 'site', 'pages');
 const TWIST_MODULES_PATH = path.join('.', 'node_modules', '@twist');
 
+/**
+ * Cleans the documentation folder (site/pages); this is to ensure that nothing slips in accidentally
+ * from a previous build
+ */
 function cleanDocsFolder() {
     shell.rm('-rf', DOCS_PATH);
     shell.mkdir(DOCS_PATH);
 }
 
+/**
+ * All the modules associated with Twist are installed as development dependencies in node_modules.
+ * We need to copy their docs into site/pages so that we can use them in gitbook
+ */
 function copyDocsFromModules() {
     modules.forEach(module => {
         let cpFrom, cpTo;
         cpFrom = path.join(TWIST_MODULES_PATH, module, 'docs');
         if (module === "core") {
+            // core module documentation has a higher visibility on the site than does
+            // documentation for other libraries
             cpTo = DOCS_PATH;
         } else {
+            // other libraries have a lower visibility
             cpTo = path.join(DOCS_PATH, "ecosystem", "libraries", module);
         }
         shell.mkdir("-p", cpTo);
         shell.cp('-r', path.join(cpFrom, '*'), cpTo);
+
+        // copy the readme -- although this might go away
         shell.cp(path.join(cpFrom, '..', 'README.md'), path.join(cpTo, 'README.md'));
     });
 
@@ -40,10 +53,15 @@ function copyDocsFromModules() {
         shell.cp(path.join(cpFrom, file), cpTo);
     });
 
+    // copy Twist core's README to the right spot -- Gitbook always looks here for
+    // the first page to load
     shell.mv(path.join(DOCS_PATH, 'README.md'), path.join('.', 'site', 'README.md'));
 }
 
-
+/**
+ * Gitbook has a templating system that doesn't like "{{" in code. So... we change it {{ to { {. 
+ * The reverse is done for consistency.
+ */
 function fixDocs() {
     shell.find(path.join(DOCS_PATH, '**', '*.md')).forEach(file => {
         console.log(`Fixing ${file}`);
@@ -52,49 +70,12 @@ function fixDocs() {
     });
 }
 
-function buildTree(curPath) {
-    return shell
-        .ls(curPath)
-        .map(file => {
-            switch (path.extname(file)) {
-                case '':
-                    const subtree = buildTree(path.join(curPath, file));
-                    if (subtree.length > 0) {
-                        return { [file]: [path.join(curPath, file), ...subtree] };
-                    }
-                    break;
-                case '.md':
-                    return path.join(curPath, file);
-            }
-            return undefined;
-        })
-        .filter(file => file);
-}
 
-function flatten(...items) {
-    return items.reduce((acc, item) => {
-        if (item instanceof Array) {
-            return [...acc, ...flatten(...item)];
-        }
-        if (typeof item !== 'string') {
-            return [...acc, ...flatten(...Object.values(item))];
-        }
-        return [...acc, item];
-    }, []);
-}
-
-function titleCase(str) {
-    return str
-        .replace(/^zz\_/, '')
-        .replace(/^\d*\_/, '')
-        .split(/[-|\s]/)
-        .map(word => word[0].toUpperCase() + word.substr(1))
-        .join(' ')
-        .replace(/\</g, '&lt;')
-        .replace(/\>/g, '&gt;');
-}
-
-
+/**
+ * Builds the SUMMARY.md file -- a requirement for gitbook to properly lay out the chapters in the sidebar.
+ * Each modules 'docs/index.md' file is used to build the index.
+ * 
+ */
 function buildSummary() {
 
     let libraries = shell.find(path.join(DOCS_PATH, 'ecosystem', 'libraries', '**', 'index.md'));
@@ -127,6 +108,9 @@ function buildSummary() {
     );
 }
 
+/**
+ * Building the site is a series of steps -- hop to it!
+ */
 function main() {
     cleanDocsFolder();
     copyDocsFromModules();
@@ -134,4 +118,4 @@ function main() {
     buildSummary();
 }
 
-main();
+main(); /* go! */
