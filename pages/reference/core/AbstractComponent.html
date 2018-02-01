@@ -1,0 +1,1398 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>AbstractComponent · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-styled-blockquotes/plugin-styled-blockquotes.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-codetabs/codetabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="BaseStore.html" />
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"adobe","repo":"twist-site","type":"star","size":"small"},{"user":"adobe","type":"follow","width":"130","count":false,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Twist</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Getting Started
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../getting-started/">
+            
+                <a href="../../getting-started/">
+            
+                    
+                    Introduction to Twist
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../getting-started/installation.html">
+            
+                <a href="../../getting-started/installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../getting-started/starter-projects.html">
+            
+                <a href="../../getting-started/starter-projects.html">
+            
+                    
+                    Starter Projects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../getting-started/hello-world.html">
+            
+                <a href="../../getting-started/hello-world.html">
+            
+                    
+                    Hello, World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../getting-started/prerequisites.html">
+            
+                <a href="../../getting-started/prerequisites.html">
+            
+                    
+                    Prerequisites
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../getting-started/compared-with-mobx.html">
+            
+                <a href="../../getting-started/compared-with-mobx.html">
+            
+                    
+                    Compared with Mobx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Fundamentals
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../fundamentals/observables.html">
+            
+                <a href="../../fundamentals/observables.html">
+            
+                    
+                    Observables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../fundamentals/components.html">
+            
+                <a href="../../fundamentals/components.html">
+            
+                    
+                    Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../fundamentals/state-management.html">
+            
+                <a href="../../fundamentals/state-management.html">
+            
+                    
+                    State Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../fundamentals/state-containers.html">
+            
+                <a href="../../fundamentals/state-containers.html">
+            
+                    
+                    State Containers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Guides
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../guides/integrating-with-redux-devtools.html">
+            
+                <a href="../../guides/integrating-with-redux-devtools.html">
+            
+                    
+                    Integrating with Redux DevTools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../guides/mutability.html">
+            
+                <a href="../../guides/mutability.html">
+            
+                    
+                    Mutability
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../guides/asynchronous-actions.html">
+            
+                <a href="../../guides/asynchronous-actions.html">
+            
+                    
+                    Asynchronous Actions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Reference
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    Core
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1.1" data-path="AbstractComponent.html">
+            
+                <a href="AbstractComponent.html">
+            
+                    
+                    AbstractComponent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="BaseStore.html">
+            
+                <a href="BaseStore.html">
+            
+                    
+                    BaseStore
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="Binder.html">
+            
+                <a href="Binder.html">
+            
+                    
+                    Binder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="CollectionBinder.html">
+            
+                <a href="CollectionBinder.html">
+            
+                    
+                    CollectionBinder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="Disposable.html">
+            
+                <a href="Disposable.html">
+            
+                    
+                    Disposable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.6" data-path="ObjectId.html">
+            
+                <a href="ObjectId.html">
+            
+                    
+                    ObjectId
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.7" data-path="ObservableArray.html">
+            
+                <a href="ObservableArray.html">
+            
+                    
+                    ObservableArray
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.8" data-path="ObservableMap.html">
+            
+                <a href="ObservableMap.html">
+            
+                    
+                    ObservableMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.9" data-path="ObservableSet.html">
+            
+                <a href="ObservableSet.html">
+            
+                    
+                    ObservableSet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.10" data-path="Scope.html">
+            
+                <a href="Scope.html">
+            
+                    
+                    Scope
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.11" data-path="Signal.html">
+            
+                <a href="Signal.html">
+            
+                    
+                    Signal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.12" data-path="SignalDispatcher.html">
+            
+                <a href="SignalDispatcher.html">
+            
+                    
+                    SignalDispatcher
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.13" data-path="TaskQueue.html">
+            
+                <a href="TaskQueue.html">
+            
+                    
+                    TaskQueue
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    Decorators
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../decorators/Action.html">
+            
+                <a href="../decorators/Action.html">
+            
+                    
+                    @Action
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../decorators/Abstract.html">
+            
+                <a href="../decorators/Abstract.html">
+            
+                    
+                    @Abstract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../decorators/Attribute.html">
+            
+                <a href="../decorators/Attribute.html">
+            
+                    
+                    @Attribute
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="../decorators/Bind.html">
+            
+                <a href="../decorators/Bind.html">
+            
+                    
+                    @Bind
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.5" data-path="../decorators/Cache.html">
+            
+                <a href="../decorators/Cache.html">
+            
+                    
+                    @Cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.6" data-path="../decorators/Component.html">
+            
+                <a href="../decorators/Component.html">
+            
+                    
+                    @Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.7" data-path="../decorators/Debounce.html">
+            
+                <a href="../decorators/Debounce.html">
+            
+                    
+                    @Debounce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.8" data-path="../decorators/Delay.html">
+            
+                <a href="../decorators/Delay.html">
+            
+                    
+                    @Delay
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.9" data-path="../decorators/Memoize.html">
+            
+                <a href="../decorators/Memoize.html">
+            
+                    
+                    @Memoize
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.10" data-path="../decorators/Observable.html">
+            
+                <a href="../decorators/Observable.html">
+            
+                    
+                    @Observable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.11" data-path="../decorators/Prototype.html">
+            
+                <a href="../decorators/Prototype.html">
+            
+                    
+                    @Prototype
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.12" data-path="../decorators/State.html">
+            
+                <a href="../decorators/State.html">
+            
+                    
+                    @State
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.13" data-path="../decorators/Store.html">
+            
+                <a href="../decorators/Store.html">
+            
+                    
+                    @Store
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.14" data-path="../decorators/Task.html">
+            
+                <a href="../decorators/Task.html">
+            
+                    
+                    @Task
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.15" data-path="../decorators/Throttle.html">
+            
+                <a href="../decorators/Throttle.html">
+            
+                    
+                    @Throttle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.16" data-path="../decorators/Wrap.html">
+            
+                <a href="../decorators/Wrap.html">
+            
+                    
+                    @Wrap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    JSX
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" >
+            
+                <span>
+            
+                    
+                    Attributes
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1.1" data-path="../jsx/attributes/as.html">
+            
+                <a href="../jsx/attributes/as.html">
+            
+                    
+                    as
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.1.2" data-path="../jsx/attributes/ref.html">
+            
+                <a href="../jsx/attributes/ref.html">
+            
+                    
+                    ref
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.1.3" data-path="../jsx/attributes/style.html">
+            
+                <a href="../jsx/attributes/style.html">
+            
+                    
+                    style
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.1.4" data-path="../jsx/attributes/class.html">
+            
+                <a href="../jsx/attributes/class.html">
+            
+                    
+                    class
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" >
+            
+                <span>
+            
+                    
+                    Components
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.2.1" data-path="../jsx/components/else.html">
+            
+                <a href="../jsx/components/else.html">
+            
+                    
+                    else
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2.2" data-path="../jsx/components/elseif.html">
+            
+                <a href="../jsx/components/elseif.html">
+            
+                    
+                    elseif
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2.3" data-path="../jsx/components/g.html">
+            
+                <a href="../jsx/components/g.html">
+            
+                    
+                    g
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2.4" data-path="../jsx/components/if.html">
+            
+                <a href="../jsx/components/if.html">
+            
+                    
+                    if
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2.5" data-path="../jsx/components/repeat.html">
+            
+                <a href="../jsx/components/repeat.html">
+            
+                    
+                    repeat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2.6" data-path="../jsx/components/unless.html">
+            
+                <a href="../jsx/components/unless.html">
+            
+                    
+                    unless
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2.7" data-path="../jsx/components/using.html">
+            
+                <a href="../jsx/components/using.html">
+            
+                    
+                    using
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" >
+            
+                <span>
+            
+                    
+                    Middleware
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.4.1" data-path="../middleware/">
+            
+                <a href="../middleware/">
+            
+                    
+                    Using Middleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.2" data-path="../middleware/protectorMiddleware.html">
+            
+                <a href="../middleware/protectorMiddleware.html">
+            
+                    
+                    protectorMiddleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.3" data-path="../middleware/remoteDevMiddleware.html">
+            
+                <a href="../middleware/remoteDevMiddleware.html">
+            
+                    
+                    remoteDevMiddleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.4" data-path="../middlware/thunkMiddleware.md">
+            
+                <span>
+            
+                    
+                    thunkMiddleware
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Libraries</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    @twist/react-webpack-plugin
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../ecosystem/libraries/react-webpack-plugin/using.md">
+            
+                <span>
+            
+                    
+                    Using
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../ecosystem/libraries/react-webpack-plugin/examples.md">
+            
+                <span>
+            
+                    
+                    Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Community</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../ACKNOWLEDGEMENTS.html">
+            
+                <a href="../../ACKNOWLEDGEMENTS.html">
+            
+                    
+                    Acknowledgements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../CONTRIBUTING.html">
+            
+                <a href="../../CONTRIBUTING.html">
+            
+                    
+                    Contributing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../CODE_OF_CONDUCT.html">
+            
+                <a href="../../CODE_OF_CONDUCT.html">
+            
+                    
+                    Code of Conduct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../CONTACT.html">
+            
+                <a href="../../CONTACT.html">
+            
+                    
+                    Contact
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >AbstractComponent</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<p><strong>Table of Contents</strong>  <em>generated with <a href="https://github.com/thlorenz/doctoc" target="_blank">DocToc</a></em></p>
+<ul>
+<li><a href="#abstract-component">Abstract Component</a><ul>
+<li><a href="#inheritance">Inheritance</a></li>
+<li><a href="#component-lifecycle">Component Lifecycle</a><ul>
+<li><a href="#constructor"><code>constructor</code></a></li>
+<li><a href="#render"><code>render</code></a></li>
+<li><a href="#componentwillmount"><code>componentWillMount</code></a></li>
+<li><a href="#componentdidmount"><code>componentDidMount</code></a></li>
+<li><a href="#componentwillunmount"><code>componentWillUnMount</code></a></li>
+</ul>
+</li>
+<li><a href="#component-apis">Component APIs</a></li>
+<li><a href="#component-features">Component Features</a></li>
+<li><a href="#events">Events</a></li>
+</ul>
+</li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h1 id="abstract-component">Abstract Component</h1>
+<p>Twist assumes an &quot;abstract component&quot; specification that is implemented by any view layer framework bindings. For example, <a href="https://github.com/adobe/react-twist" target="_blank">React Twist</a> implements everything within this specification using React-specific code.</p>
+<h2 id="inheritance">Inheritance</h2>
+<p>A component inherits from <a href="SignalDispatcher.html"><code>SignalDispatcher</code></a> and <a href="Disposable.html"><code>Disposable</code></a>. As such, all the methods and functionality provided by those classes are also provided by Twist components, including <code>watch</code>, <code>dispose</code>, <code>trigger</code>, etc.</p>
+<h2 id="component-lifecycle">Component Lifecycle</h2>
+<p>A Twist component uses the following methods from the React component lifecycle, namely:</p>
+<ul>
+<li><code>constructor</code></li>
+<li><code>render</code></li>
+<li><code>componentWillMount</code></li>
+<li><code>componentDidMount</code></li>
+<li><code>componentWillUnmount</code></li>
+</ul>
+<h3 id="constructor"><code>constructor</code></h3>
+<p>When working with other bindings, it might be tempting to call <code>super</code> as you would idiomatically. For example, when working in React, you might want to pass <code>props</code> and <code>context</code> to <code>super</code>. This should be avoided.</p>
+<pre class="language-"><code class="lang-jsx"><span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/* continue your initialization */</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="render"><code>render</code></h3>
+<p>Most view layers will allow arbitrary logic within the <code>render</code> method. You can, of course, use arbitrary logic within Twist components, but if you want these components to be idiomatic and portable, you should follow these guidelines:</p>
+<ul>
+<li>Only have one <code>return</code> value</li>
+<li>The <code>return</code> value should return JSX</li>
+<li><strong>Don&apos;t</strong> perform any additional logic within the <code>render</code> method beyond the <code>return</code> statement</li>
+<li>A <code>ref</code> attribute should refer to a class field rather than be a function</li>
+<li>Use structural components instead of Javascript constructs to iterate and render conditionally</li>
+</ul>
+<h3 id="componentwillmount"><code>componentWillMount</code></h3>
+<p>This method is called just prior to the component being mounted in the DOM.</p>
+<h3 id="componentdidmount"><code>componentDidMount</code></h3>
+<p>This method is called just after the component is mounted in the DOM.</p>
+<h3 id="componentwillunmount"><code>componentWillUnMount</code></h3>
+<p>This method is called just prior to the component being removed from the DOM.</p>
+<h2 id="component-apis">Component APIs</h2>
+<p>A Twist component provides the following members:</p>
+<ul>
+<li>Properties<ul>
+<li><code>scope</code> is a reference to state shared between a tree of components. It&apos;s <em>similar</em> to React&apos;s <code>context</code>, but easier to use and understand. See <a href="Scope.html">Scope</a> for more information.</li>
+<li><code>children</code> is an observable collection containing all the component&apos;s child elements.</li>
+</ul>
+</li>
+<li>Methods<ul>
+<li><code>undeclaredAttributes()</code> allows one to access any extra attributes passed in via a consumer that aren&apos;t explicitly defined with an <code>@Attribute</code> decorator. Useful for when you need to spread additional attributes to children.</li>
+<li><code>renderChildren([...args])</code> allows one to pass arguments to children using the <code>as</code> attribute.</li>
+<li><code>renderChildren(name)</code> enables rendering of namespaced children (for example, <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">dialog:</span>footer</span> <span class="token punctuation">/&gt;</span></span></code>)</li>
+<li><code>renderChildren(name, [...args])</code> allows one to pass arguments to a namespaced child</li>
+</ul>
+</li>
+</ul>
+<h2 id="component-features">Component Features</h2>
+<p>A Twist component must provide for the following:</p>
+<ul>
+<li>Reactive rendering whenever observables and attributes change</li>
+<li>Two-way data binding via <code>bind:</code> attribute namespace</li>
+<li><code>class</code> attributes<ul>
+<li>Allow <code>class</code> as an attribute (in addition to <code>className</code></li>
+<li>Concatenate multiple <code>class</code> attributes into a single string</li>
+<li>Boolean attributes: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class-selected</span><span class="token attr-value"><span class="token punctuation">=</span>{</span> <span class="token attr-name">this.selected</span> <span class="token attr-name">}</span> <span class="token punctuation">&gt;</span></span></code> will only apply <code>selected</code> to the element&apos;s <code>class</code> if <code>this.selected</code> is <code>true</code>.</li>
+</ul>
+</li>
+<li><code>style</code> attributes<ul>
+<li>Individual styles can be targeted via <code>style-*</code>; for example: <code>style-background-color: &apos;red&apos;</code>.</li>
+<li>Styles aren&apos;t required to be objects; they can be strings.</li>
+</ul>
+</li>
+</ul>
+<h2 id="events">Events</h2>
+<p>View-layer frameworks take different approaches to event handling. Some will try to hide browser differences between events and others will only pass the actual browser-generated event. Twist components will <em>always</em> pass the underlying browser event. If you need to abstract away browser differences, there are other libraries that can be used to do so.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="BaseStore.html" class="navigation navigation-next navigation-unique" aria-label="Next page: BaseStore">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"AbstractComponent","level":"1.5.1.1","depth":3,"next":{"title":"BaseStore","level":"1.5.1.2","depth":3,"path":"pages/reference/core/BaseStore.md","ref":"./pages/reference/core/BaseStore.md","articles":[]},"previous":{"title":"Core","level":"1.5.1","depth":2,"ref":"","articles":[{"title":"AbstractComponent","level":"1.5.1.1","depth":3,"path":"pages/reference/core/AbstractComponent.md","ref":"./pages/reference/core/AbstractComponent.md","articles":[]},{"title":"BaseStore","level":"1.5.1.2","depth":3,"path":"pages/reference/core/BaseStore.md","ref":"./pages/reference/core/BaseStore.md","articles":[]},{"title":"Binder","level":"1.5.1.3","depth":3,"path":"pages/reference/core/Binder.md","ref":"./pages/reference/core/Binder.md","articles":[]},{"title":"CollectionBinder","level":"1.5.1.4","depth":3,"path":"pages/reference/core/CollectionBinder.md","ref":"./pages/reference/core/CollectionBinder.md","articles":[]},{"title":"Disposable","level":"1.5.1.5","depth":3,"path":"pages/reference/core/Disposable.md","ref":"./pages/reference/core/Disposable.md","articles":[]},{"title":"ObjectId","level":"1.5.1.6","depth":3,"path":"pages/reference/core/ObjectId.md","ref":"./pages/reference/core/ObjectId.md","articles":[]},{"title":"ObservableArray","level":"1.5.1.7","depth":3,"path":"pages/reference/core/ObservableArray.md","ref":"./pages/reference/core/ObservableArray.md","articles":[]},{"title":"ObservableMap","level":"1.5.1.8","depth":3,"path":"pages/reference/core/ObservableMap.md","ref":"./pages/reference/core/ObservableMap.md","articles":[]},{"title":"ObservableSet","level":"1.5.1.9","depth":3,"path":"pages/reference/core/ObservableSet.md","ref":"./pages/reference/core/ObservableSet.md","articles":[]},{"title":"Scope","level":"1.5.1.10","depth":3,"path":"pages/reference/core/Scope.md","ref":"./pages/reference/core/Scope.md","articles":[]},{"title":"Signal","level":"1.5.1.11","depth":3,"path":"pages/reference/core/Signal.md","ref":"./pages/reference/core/Signal.md","articles":[]},{"title":"SignalDispatcher","level":"1.5.1.12","depth":3,"path":"pages/reference/core/SignalDispatcher.md","ref":"./pages/reference/core/SignalDispatcher.md","articles":[]},{"title":"TaskQueue","level":"1.5.1.13","depth":3,"path":"pages/reference/core/TaskQueue.md","ref":"./pages/reference/core/TaskQueue.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["devops","expandable-chapters-interactive","styled-blockquotes","codetabs","codesandbox","recently-updated","github-buttons","prism","-highlight"],"pluginsConfig":{"prism":{},"search":{},"styled-blockquotes":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"expandable-chapters-interactive":{},"recently-updated":{},"github-buttons":{"buttons":[{"user":"adobe","repo":"twist-site","type":"star","size":"small"},{"user":"adobe","type":"follow","width":"130","count":false,"size":"small"}]},"codesandbox":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"devops":{"bd_token":"","google_analytics":"","google_search":"","livere_token":""}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pages/reference/core/AbstractComponent.md","mtime":"2018-02-01T19:50:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-01T20:06:14.689Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-devops/devops.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
