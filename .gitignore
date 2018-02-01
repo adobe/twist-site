@@ -63,6 +63,7 @@ site/_book/
 # Ignore the site pages directory -- this is filled in via build scripts
 site/pages/**/*
 site/SUMMARY.md
+site/README.md
 !site/pages/.gitkeep
 
 # Ignore esdocs
