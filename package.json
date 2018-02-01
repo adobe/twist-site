@@ -9,7 +9,9 @@
     "docs:munge": "node ./build.js",
     "site:install": "gitbook install site",
     "site:build": "gitbook build site",
-    "site:serve": "gitbook serve site"
+    "site:serve": "gitbook serve site",
+    "ghpages:deploy": "gh-pages -d site/_book",
+    "build": "npm run site:install && npm run site:build && npm run esdoc:build"
   },
   "repository": {
     "type": "git",
@@ -40,6 +42,7 @@
     "esdoc": "^1.0.4",
     "esdoc-ecmascript-proposal-plugin": "^1.0.0",
     "esdoc-standard-plugin": "^1.0.0",
+    "gh-pages": "^1.1.0",
     "gitbook-cli": "^2.3.2",
     "shelljs": "^0.8.1"
   },
