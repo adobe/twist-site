@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">@twist/core/src/Binder.jsx | Twist</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="React... with a twist!"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Twist"><meta property="twitter:description" content="React... with a twist!"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/adobe/twist"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#babel-plugin-transform-src-transforms">babel-plugin-transform/src/transforms</a><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DecoratorDefinition">DecoratorDefinition</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src">core/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/BaseStore.jsx~BaseStore.html">BaseStore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Binder.jsx~Binder.html">Binder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/CollectionBinder.jsx~CollectionBinder.html">CollectionBinder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Disposable.jsx~Disposable.html">Disposable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObjectId.jsx~ObjectId.html">ObjectId</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableArray.jsx~ObservableArray.html">ObservableArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableMap.jsx~ObservableMap.html">ObservableMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableSet.jsx~ObservableSet.html">ObservableSet</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Scope.jsx~Scope.html">Scope</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Signal.jsx~Signal.html">Signal</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/SignalDispatcher.jsx~SignalDispatcher.html">SignalDispatcher</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src-decorators">core/src/decorators</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/decorators/State.jsx~State.html">State</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Abstract">Abstract</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Bind">Bind</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Cache">Cache</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Debounce">Debounce</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Delay">Delay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Memoize">Memoize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Observable">Observable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Prototype">Prototype</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Throttle">Throttle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Wrap">Wrap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-state">state</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src-middleware">core/src/middleware</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-protectorMiddleware">protectorMiddleware</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-remoteDevMiddleware">remoteDevMiddleware</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-thunkMiddleware">thunkMiddleware</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#react-src">react/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/react/src/BaseComponent.jsx~Component.html">Component</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/react/src/BaseVirtualComponent.jsx~BaseVirtualComponent.html">BaseVirtualComponent</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">@twist/core/src/Binder.jsx</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/*
+ *  Copyright 2016 Adobe Systems Incorporated. All rights reserved.
+ *  This file is licensed to you under the Apache License, Version 2.0 (the &quot;License&quot;);
+ *  you may not use this file except in compliance with the License. You may obtain a copy
+ *  of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software distributed under
+ *  the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ *  OF ANY KIND, either express or implied. See the License for the specific language
+ *  governing permissions and limitations under the License.
+ *
+ */
+
+import Filters from &apos;./internal/filters/Filters&apos;;
+import BaseTaskQueue from &apos;./internal/queue/BaseTaskQueue&apos;;
+import Logger from &apos;./internal/utils/Logger&apos;;
+
+import Prototype from &apos;./decorators/Prototype&apos;;
+
+import TaskQueue from &apos;./TaskQueue&apos;;
+import Signal from &apos;./Signal&apos;;
+import Disposable from &apos;./Disposable&apos;;
+import ObjectId from &apos;./ObjectId&apos;;
+
+var runFilters = Filters.filter;
+
+// Using an unique object to identify binders that didn&apos;t run yet.
+var FirstExecutionMarker = {};
+
+// EmptyArray is an optimization - we only allocate a new array when needed.
+var EmptyArray = [];
+var EmptyArrayInUse = false;
+
+const noop = function() {};
+
+const wrapGetterFunction = function(fn) {
+    if (typeof fn === &apos;function&apos;) {
+        return fn;
+    }
+    if (typeof fn === &apos;object&apos; &amp;&amp; typeof fn.get === &apos;function&apos;) {
+        return fn.get;
+    }
+    return noop;
+};
+
+const wrapSetterFunction = function(fn) {
+    if (typeof fn === &apos;object&apos; &amp;&amp; typeof fn.set === &apos;function&apos;) {
+        return fn.set;
+    }
+    return noop;
+};
+
+// Static methods in this file use Binder instead of this to make it possible to
+// call the method directly without using a member property call.
+@Prototype({
+    FirstExecutionMarker
+})
+export default class Binder extends Disposable {
+
+    static mutatorsStack = [];
+    static active = null;
+    static mutator = null;
+
+    static pushMutator(mutator) {
+        Binder.mutatorsStack.push(Binder.mutator);
+        Binder.mutator = mutator;
+    }
+
+    static popMutator(mutator) {
+        if (Binder.mutator === mutator) {
+            Binder.mutator = Binder.mutatorsStack.pop();
+        }
+        else {
+            console.error(&apos;Trying to pop a mutator that is not in the top of the stack&apos;);
+        }
+    }
+
+    static run(bindings, fn, context) {
+        // Save existing active binders and push the new one as active.
+        var previous = Binder.active;
+        Binder.active = bindings;
+
+        var track = context &amp;&amp; context.track;
+        if (track) {
+            bindings.track = context;
+            Logger.groupStart(&apos;Running &apos; + (context.name || &apos;bindings&apos;));
+        }
+        try {
+            return fn.call(context);
+        }
+        finally {
+            if (track) {
+                Logger.groupEnd(&apos;Running &apos; + (context.name || &apos;binder&apos;));
+                bindings.track = null;
+            }
+            // Revert the active binder.
+            Binder.active = previous;
+        }
+    }
+
+    static recordEvent(obj, eventName) {
+        var active = Binder.active;
+        if (active) {
+            // Use .track to identify the code that is invalidating a binding.
+            var track = active.track;
+            if (track) {
+                let objName = ObjectId.get(obj) + &apos;-&apos; + (obj.constructor ? obj.constructor.name : &apos;Anonymous&apos;);
+                Logger.log(&apos;Recording&apos;, objName, eventName);
+            }
+            active.push({ obj, eventName });
+        }
+    }
+
+    static recordChange(obj, propertyName, newValue, oldValue) {
+        Signal.trigger(obj, propertyName);
+
+        var mutator = Binder.mutator;
+        if (mutator) {
+            mutator.record(obj, propertyName, newValue, oldValue);
+        }
+    }
+
+    constructor(valueGetter, callback = noop, ignoreFirstRun = false, invalidate = TaskQueue, priority = 0, disposableParent = null) {
+        super();
+
+        this.previousValue = FirstExecutionMarker;
+        this.bindings = [];
+        this.dirty = !!ignoreFirstRun;
+        this.disposableParent = disposableParent;
+
+        this.valueGetter = wrapGetterFunction(valueGetter);
+        this.set = wrapSetterFunction(valueGetter);
+        this.callback = callback || noop;
+
+        if (invalidate &amp;&amp; invalidate instanceof BaseTaskQueue) {
+            var queue = invalidate;
+            var apply = this.apply.bind(this);
+            invalidate = () =&gt; queue.push(apply, priority);
+        }
+
+        this.invalidate = () =&gt; {
+            if (Binder.active === this) {
+                // Don&apos;t invalidate when the Binder is currently running the valueGetter.
+                return;
+            }
+            if (this.track) {
+                var error = new Error();
+                Error.captureStackTrace(error);
+                Logger.log(&apos;change detected&apos;, window._signal, error.stack);
+            }
+
+            // When we have an invalidate method, then we allow the caller to handle it.
+            if (invalidate) {
+                this.dirty = true;
+                invalidate();
+            }
+            else {
+                // Otherwise just execute the update now.
+                this.compute();
+            }
+        };
+
+        if (!ignoreFirstRun) {
+            this.compute();
+        }
+        else {
+            this.get();
+        }
+    }
+
+    removeBindings() {
+        var bindings = this.bindings;
+        if (bindings) {
+            var invalidate = this.invalidate;
+            for (var i = 0, l = bindings.length; i &lt; l; ++i) {
+                var binding = bindings[i];
+                binding.ref.remove(invalidate);
+
+                // There can be cases when reading a value needs to compute a subscription.
+                // In that case we can dispose the subscription by adding the dispose method.
+                if (binding.dispose) {
+                    binding.dispose();
+                }
+            }
+            this.bindings = null;
+        }
+    }
+
+    dispose() {
+        this.removeBindings();
+        super.dispose();
+    }
+
+    update(value, invokeCallback = true) {
+        var previousValue = this.previousValue;
+        // Only invoke the watch callback if the value actually changed
+        // Note: Since in JavaScript NaN !== NaN, we have to separately test the case
+        // when they&apos;re both NaN&apos;s, by seeing if they&apos;re not equal to themselves.
+        if (previousValue === FirstExecutionMarker || (previousValue !== value &amp;&amp; (previousValue === previousValue || value === value))) {
+            this.previousValue = value;
+            if (invokeCallback) {
+                this.callback(value);
+            }
+            return true;
+        }
+    }
+
+    apply() {
+        if (!this.isDisposed &amp;&amp; this.dirty) {
+            return this.compute();
+        }
+    }
+
+    _computeInnerValue() {
+        // Remove all previous bindings.
+        this.dirty = false;
+        this.removeBindings();
+
+        var disposableParent = this.disposableParent;
+        if (disposableParent &amp;&amp; disposableParent.isDisposed) {
+            // No need to run this anymore, our parent is now disposed and cannot receive any of our events anyway.
+            return;
+        }
+
+        // Note: We use an empty array by default to avoid allocating a new empty one every time we try to run.
+        // This optimization makes the assumption that most expressions are non-bindable, so no events are necessary.
+        // In that case the array can be used to collect future expressions. When the expression is actually bindable
+        // we reset the EmptyArray to a new empty one.
+
+        // However, it&apos;s possible that EmptyArray isn&apos;t empty, if there&apos;s a binding within a binding (e.g. this is
+        // possible with the @Cache decorator). To be sure, we use a flag to check whether EmptyArray is already in use.
+        // If it is, we have to create a new one, just to be on the safe side.
+        if (EmptyArrayInUse) {
+            EmptyArray = [];
+        }
+
+        EmptyArrayInUse = true;
+        var bindings = EmptyArray;
+
+        var value = Binder.run(bindings, this.valueGetter, this);
+        value = runFilters(bindings, value);
+
+        EmptyArrayInUse = false;
+
+        if (!bindings.length) {
+            return value;
+        }
+
+        // At this point, the empty array isn&apos;t empty any more, so make a new one :)
+        EmptyArray = [];
+
+        var invalidate = this.invalidate;
+        for (let i = 0, l = bindings.length; i &lt; l; ++i) {
+            let binding = bindings[i];
+            binding.ref = Signal.on(binding.obj, binding.eventName, invalidate);
+        }
+
+        // Remember the bindings so we can dispose of them when they change
+        this.bindings = bindings;
+
+        return value;
+    }
+
+    compute() {
+        var value = this._computeInnerValue();
+        return this.update(value, true);
+    }
+
+    get() {
+        var value = this._computeInnerValue();
+        this.update(value, false);
+        return value;
+    }
+
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

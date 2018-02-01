@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">@twist/react-webpack-plugin/src/ReactTwistWebpackPlugin.js | Twist</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="React... with a twist!"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Twist"><meta property="twitter:description" content="React... with a twist!"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/adobe/twist"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#babel-plugin-transform-src-transforms">babel-plugin-transform/src/transforms</a><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DecoratorDefinition">DecoratorDefinition</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src">core/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/BaseStore.jsx~BaseStore.html">BaseStore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Binder.jsx~Binder.html">Binder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/CollectionBinder.jsx~CollectionBinder.html">CollectionBinder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Disposable.jsx~Disposable.html">Disposable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObjectId.jsx~ObjectId.html">ObjectId</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableArray.jsx~ObservableArray.html">ObservableArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableMap.jsx~ObservableMap.html">ObservableMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableSet.jsx~ObservableSet.html">ObservableSet</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Scope.jsx~Scope.html">Scope</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Signal.jsx~Signal.html">Signal</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/SignalDispatcher.jsx~SignalDispatcher.html">SignalDispatcher</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src-decorators">core/src/decorators</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/decorators/State.jsx~State.html">State</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Abstract">Abstract</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Bind">Bind</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Cache">Cache</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Debounce">Debounce</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Delay">Delay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Memoize">Memoize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Observable">Observable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Prototype">Prototype</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Throttle">Throttle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Wrap">Wrap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-state">state</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src-middleware">core/src/middleware</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-protectorMiddleware">protectorMiddleware</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-remoteDevMiddleware">remoteDevMiddleware</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-thunkMiddleware">thunkMiddleware</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#react-src">react/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/react/src/BaseComponent.jsx~Component.html">Component</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/react/src/BaseVirtualComponent.jsx~BaseVirtualComponent.html">BaseVirtualComponent</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">@twist/react-webpack-plugin/src/ReactTwistWebpackPlugin.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/*
+ *  Copyright 2017 Adobe Systems Incorporated. All rights reserved.
+ *  This file is licensed to you under the Apache License, Version 2.0 (the &quot;License&quot;);
+ *  you may not use this file except in compliance with the License. You may obtain a copy
+ *  of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software distributed under
+ *  the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ *  OF ANY KIND, either express or implied. See the License for the specific language
+ *  governing permissions and limitations under the License.
+ *
+ */
+
+const TwistConfiguration = require(&apos;@twist/configuration&apos;);
+const convertRuleToCondition = require(&apos;./convertRuleToCondition&apos;);
+const webpack = require(&apos;webpack&apos;);
+
+const DEFAULT_OPTIONS = {
+    includeBabelRuntime: true,
+    targets: { browsers: [ &apos;last 2 versions&apos;, &apos;ie &gt;= 10&apos; ] },
+    transformImports: false,
+    useBabelModuleResolver: false,
+    twistPlugin: &apos;@twist/babel-plugin-transform-react&apos;,
+
+    // Webpack-specific options:
+    babelLoaderTest: /\.jsx$/,
+    useThreadLoader: true,
+    useSourceMaps: true,
+};
+
+/**
+ * ReactWebpackPlugin configures Webpack to work with Twist. Its main function is as follows:
+ *
+ * - Add and configure a Babel plugin to parse &quot;.jsx&quot; files, including any decorators defined
+ *   by the libraries you have chosen to add.
+ * - Add any additional Webpack plugins that libraries have requested.
+ *
+ * ReactWebpackPlugin extends TwistConfiguration. You may use that class directly if you&apos;d prefer
+ * to configure your build system yourself.
+ */
+module.exports = class ReactWebpackPlugin extends TwistConfiguration {
+
+    constructor(options) {
+        super(&apos;webpack&apos;, Object.assign({}, DEFAULT_OPTIONS, options));
+    }
+
+    _init(contextName, options) {
+
+        /**
+         * The local webpack instance.
+         * @member {Webpack}
+         */
+        this.webpack = webpack;
+
+        this._webpackPlugins = [];
+        this._nonLibraryRuleExcludes = [];
+        this._webpackRules = [];
+        this._babelLoaderExcludes = [];
+
+        super._init(contextName, options);
+
+        // React Babel Plugins (some people use babel-preset-react instead):
+        this.addBabelPlugin(&apos;syntax-jsx&apos;);
+        this.addBabelPlugin(&apos;transform-react-jsx&apos;);
+        this.addBabelPlugin(&apos;transform-react-display-name&apos;);
+    }
+
+    /**
+     * Adds a .twistrc configuration to the Twist configuration
+     * This shouldn&apos;t be called directly - it&apos;s called as a consequence of _libraryLoader.load().
+     *
+     * @param {Object} config The configuration from the .twistrc file
+     */
+    mergeConfig(config = {}) {
+        super.mergeConfig(config);
+
+        // Babel loader excludes
+        this._forEachConfig(config.babelLoaderExcludes, this.addBabelLoaderExclude.bind(this));
+
+        // Webpack plugins
+        this._forEachConfig(config.webpackPlugins, this.addWebpackPlugin.bind(this));
+
+        // Webpack rules
+        this._forEachConfig(config.webpackRules, this.addWebpackRule.bind(this));
+
+        // Global webpack rules
+        this._forEachConfig(config.globalWebpackRules, this.addGlobalWebpackRule.bind(this));
+    }
+
+    /**
+     * Add an exclude pattern to Twist&apos;s babel loader. Use this only if you need to exclude certain files
+     * that would otherwise match Twist files.
+     * @param {RegExp|string} exclude
+     * @return {ReactWebpackPlugin}
+     */
+    addBabelLoaderExclude(exclude) {
+        this._babelLoaderExcludes.push(exclude);
+        return this;
+    }
+
+    /**
+     * Add an additional Webpack plugin. This is meant to be used by libraries; if you are not
+     * writing a library, just add other plugins to your Webpack config normally.
+     * @param {WebpackPlugin} plugin
+     * @return {ReactWebpackPlugin}
+     */
+    addWebpackPlugin(plugin) {
+        if (!this.currentLibrary.parentLibrary) {
+            throw new Error(&apos;addWebpackPlugin() must be called from within a Twist library. &apos;
+                + &apos;To add a webpack plugin to your project, add it to your webpack config directly. &apos;
+                + &apos;If you are calling this from a library, make sure you have called `addPath()` first.&apos;);
+        }
+        this._webpackPlugins.push(plugin);
+        return this;
+    }
+
+    /**
+     * Add a Rule to the Webpack configuration. See &lt;https://webpack.js.org/configuration/module/#rule&gt;.
+     * A Rule typically inclues a &quot;test&quot; property and a &quot;loader&quot; property, and can be used to specify loaders
+     * for specific files (such as CSS processors).
+     *
+     * NOTE: Rules are automatically scoped to apply only to files contained within your library&apos;s package.
+     * This ensures that different libraries don&apos;t conflict with each others&apos; loaders. If you intend to provide
+     * a loader that applies to files outside the current library, use `addGlobalWebpackRule`, with caution.
+     *
+     * @param {Rule} rule A webpack rule (e.g. { test: /\.css$/, loader: &apos;style-loader&apos; })
+     * @return {ReactWebpackPlugin}
+     */
+    addWebpackRule(rule) {
+        if (!this.currentLibrary.parentLibrary) {
+            throw new Error(&apos;addWebpackRule() must be called from within a Twist library. &apos;
+                + &apos;To add a webpack rule to your project, add it to your webpack config directly. &apos;
+                + &apos;If you are calling this from a library, make sure you have called `addPath()` first.&apos;);
+        }
+        // This rule applies to files within the current library which match `rule`.
+        // Exclude files that match this rule from the end-users&apos; configuration:
+        this._nonLibraryRuleExcludes.push({
+            and: [ this.currentLibrary.path, convertRuleToCondition(rule) ]
+        });
+        // And add the actual rule:
+        this._webpackRules.push({
+            include: this.currentLibrary.path,
+            rules: [
+                rule
+            ]
+        });
+        return this;
+    }
+
+    /**
+     * Add a rule to the Webpack configuration that applies to a path _outside_ the current library.
+     * Only use this if you must provide a loader for files that don&apos;t live within your library&apos;s path.
+     *
+     * The rule you provide MUST have an `include` property, pointing to the absolute path of a directory
+     * to which your loader will apply. This ensures that your loader points to a constrained set of files.
+     * You can use `require.resolve(&quot;some-path-of-a-known-file&quot;)` to get the absolute path of a dependency.
+     *
+     * NOTE: By providing this loader, you&apos;re effectively saying that this loader takes ownership of any
+     * matching files. If a user provides a similar rule in their config, yours takes precedence.
+     *
+     * @param {Rule} rule
+     * @return {ReactWebpackPlugin}
+     */
+    addGlobalWebpackRule(rule) {
+        if (!this.currentLibrary.parentLibrary) {
+            throw new Error(&apos;addGlobalWebpackRule() must be called from within a Twist library. &apos;
+                + &apos;To add a webpack rule to your project, add it to your webpack config directly. &apos;
+                + &apos;If you are calling this from a library, make sure you have called `addPath()` first.&apos;);
+        }
+        if (!rule.include) {
+            throw new Error(&apos;You must provide an `include` property on `ReactWebpackPlugin.addGlobalWebpackRule()`. &apos;
+                + &apos;See its documentation for details.&apos;);
+        }
+        this._nonLibraryRuleExcludes.push(convertRuleToCondition(rule));
+        this._webpackRules.push(rule);
+        return this;
+    }
+
+    /**
+     * Add a custom Babel plugin. Note that in order to use multi-threaded compilation, the plugin parameter must be a string
+     * (Babel will automatically require it when it&apos;s needed).
+     *
+     * @param {BabelPlugin|string} plugin
+     * @param {object} [options]
+     */
+    addBabelPlugin(plugin, options) {
+        if (typeof plugin !== &apos;string&apos; &amp;&amp; this._options.useThreadLoader) {
+            console.warn(&apos;In order to use the thread-loader, all Babel plugins must be passed in as strings. Change `require(xxx)` to `xxx` if you want to enable multi-threaded compilation&apos;);
+            this._options.useThreadLoader = false;
+        }
+        return super.addBabelPlugin(plugin, options);
+    }
+
+    /**
+     * Apply the plugin to a Webpack compiler. (This function is called by Webpack.)
+     * @param {Compiler} compiler
+     */
+    apply(compiler) {
+        const options = compiler.options;
+        // Configure the Twist path aliases, merging them with `resolve.alias` in such a way
+        // that users&apos; aliases override ours.
+        options.resolve = options.resolve || {};
+        options.resolve.alias = Object.assign({}, this.twistOptions.aliases, options.resolve.alias || {});
+
+        options.module = options.module || {};
+        options.module.rules = options.module.rules || [];
+
+        if (this._options.babelLoaderTest) {
+            let babelOptions = Object.assign(this.babelOptions, {
+                sourceMaps: this._options.useSourceMaps
+            });
+            let use = [ {
+                loader: &apos;babel-loader&apos;,
+                options: babelOptions
+            } ];
+
+            if (this._options.useThreadLoader) {
+                use.unshift({
+                    loader: &apos;thread-loader&apos;
+                });
+            }
+
+            options.module.rules.push({
+                test: this._options.babelLoaderTest,
+                use,
+                exclude: this._babelLoaderExcludes
+            });
+        }
+
+        // Exclude any &quot;files handled by libraries&apos; loaders&quot; from end-users&apos; rules.
+        options.module.rules.forEach((rule) =&gt; {
+            if (!rule.exclude) {
+                rule.exclude = [];
+            }
+            else if (!Array.isArray(rule.exclude)) {
+                rule.exclude = [ rule.exclude ];
+            }
+            rule.exclude = rule.exclude.concat(this._nonLibraryRuleExcludes);
+        });
+
+        this._webpackRules.forEach((rule) =&gt; {
+            options.module.rules.push(rule);
+        });
+
+        // Add any plugins that external libraries have defined.
+        this._webpackPlugins.forEach((plugin) =&gt; {
+            plugin.apply(compiler);
+        });
+    }
+};
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

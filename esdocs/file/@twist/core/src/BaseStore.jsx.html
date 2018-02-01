@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">@twist/core/src/BaseStore.jsx | Twist</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="React... with a twist!"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Twist"><meta property="twitter:description" content="React... with a twist!"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/adobe/twist"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#babel-plugin-transform-src-transforms">babel-plugin-transform/src/transforms</a><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DecoratorDefinition">DecoratorDefinition</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src">core/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/BaseStore.jsx~BaseStore.html">BaseStore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Binder.jsx~Binder.html">Binder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/CollectionBinder.jsx~CollectionBinder.html">CollectionBinder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Disposable.jsx~Disposable.html">Disposable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObjectId.jsx~ObjectId.html">ObjectId</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableArray.jsx~ObservableArray.html">ObservableArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableMap.jsx~ObservableMap.html">ObservableMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableSet.jsx~ObservableSet.html">ObservableSet</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Scope.jsx~Scope.html">Scope</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Signal.jsx~Signal.html">Signal</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/SignalDispatcher.jsx~SignalDispatcher.html">SignalDispatcher</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src-decorators">core/src/decorators</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/decorators/State.jsx~State.html">State</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Abstract">Abstract</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Bind">Bind</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Cache">Cache</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Debounce">Debounce</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Delay">Delay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Memoize">Memoize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Observable">Observable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Prototype">Prototype</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Throttle">Throttle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Wrap">Wrap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-state">state</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src-middleware">core/src/middleware</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-protectorMiddleware">protectorMiddleware</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-remoteDevMiddleware">remoteDevMiddleware</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-thunkMiddleware">thunkMiddleware</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#react-src">react/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/react/src/BaseComponent.jsx~Component.html">Component</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/react/src/BaseVirtualComponent.jsx~BaseVirtualComponent.html">BaseVirtualComponent</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">@twist/core/src/BaseStore.jsx</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/*
+ *  Copyright 2016 Adobe Systems Incorporated. All rights reserved.
+ *  This file is licensed to you under the Apache License, Version 2.0 (the &quot;License&quot;);
+ *  you may not use this file except in compliance with the License. You may obtain a copy
+ *  of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software distributed under
+ *  the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ *  OF ANY KIND, either express or implied. See the License for the specific language
+ *  governing permissions and limitations under the License.
+ *
+ */
+
+import Exportable from &apos;./internal/state/Exportable&apos;;
+import ActionDispatcher from &apos;./internal/state/ActionDispatcher&apos;;
+import StoreSerializer from &apos;./internal/state/StoreSerializer&apos;;
+import thunkMiddleware from &apos;./middleware/thunkMiddleware&apos;;
+
+import Observable from &apos;./decorators/Observable&apos;;
+
+/**
+ * Private data associated with a store.
+ *
+ * @private
+ */
+class StoreData {
+    @Observable parent; // Reference to the parent store
+
+    // The following don&apos;t need to be observable, since they&apos;re not directly exposed through any public APIs:
+    name;
+    middleware;
+    subStores = {}; // Map from key to substore - used to keep track of the stores we need to recursively dispatch to.
+}
+
+/**
+ * A Store is a container of state - users of Twist should extend Store by using the @Store decorator on a class.
+ * Within a store, the @State.XXX decorators are used to define how a store should be serialized to/from JSON.
+ *
+ * In addition to serialization, Store provides a dispatch mechanism, so that actions can be dispatched to a store to mutate it.
+ * You can attach middleware to intercept a dispatch. It also keeps track of the store hierarchy, so that when you dispatch an
+ * action to a store, it gets routed to the top-level parent store (so it goes through the top-level middleware), before being
+ * router back down to the target store. Actions also propagate to sub-stores (unless they return a value, which prevents propagation),
+ * so that a single action can be handled by multiple stores.
+ */
+export default class BaseStore extends Exportable {
+
+    __data = new StoreData;
+
+    constructor(initialState, middleware, includeDefaultMiddleware = true) {
+        super();
+
+        // Allow middleware, for hooking into the dispatch action
+        var data = this.__data;
+        data.middleware = includeDefaultMiddleware ? [ thunkMiddleware ] : [];
+        if (middleware instanceof Array) {
+            data.middleware = data.middleware.concat(middleware);
+        }
+        else if (middleware) {
+            // If you just have a single piece of middleware to add (e.g. devtools), you don&apos;t need to put it in an array
+            data.middleware.push(middleware);
+        }
+
+        // If we have an initial state, dispatch an INIT action to set it.
+        // This ensures that state is always set via an action.
+        if (initialState) {
+            this.dispatch(ActionDispatcher.INIT_ACTION, initialState);
+        }
+    }
+
+    _isMutable() {
+        if (this.__allowMutable !== undefined) {
+            return this.__allowMutable;
+        }
+        if (this.__data.parent) {
+            // Inherit from parent
+            // TODO: We should cache this to avoid reading all the way up the tree every time
+            return this.__data.parent._isMutable();
+        }
+    }
+
+    _linkStore(name, store) {
+        var subStores = this.__data.subStores;
+        if (subStores[name]) {
+            subStores[name].__data.parent = undefined;
+            subStores[name].__data.name = undefined;
+            subStores[name] = undefined;
+        }
+        if (store &amp;&amp; (store instanceof BaseStore)) {
+            // Make sure the store doesn&apos;t already have a parent (different from us!) - that&apos;s a no-no!
+            if (store.__data.parent &amp;&amp; store.__data.parent !== this) {
+                throw new Error(&apos;The store you\&apos;re attempting to assign to &quot;&apos; + name + &apos;&quot; already belongs to another store. The store hierarchy must be a tree.&apos;);
+            }
+
+            subStores[name] = store;
+            store.__data.parent = this;
+            store.__data.name = name;
+        }
+    }
+
+    // Private: Internal dispatcher, so we can tell the difference between a user-invoked dispatch, and
+    _doDispatch(action, payload) {
+
+        // Dispatch the action to the current store, if it supports it
+        var preventPropagation = false;
+        var retVal;
+        if (action === ActionDispatcher.INIT_ACTION) {
+            // Special init action (initializing the store)
+            super.fromJSON(...payload);
+            preventPropagation = true;
+        }
+        else if (action.indexOf(ActionDispatcher.IMPLICIT_ACTION_PREFIX) === 0) {
+            // Implicit action - the action name starts with &apos;@@&apos; and is a (.-separated) list of property names, ending with
+            // either a property or a method name - a method name is indicated by trailing parentheses &quot;()&quot;. Some examples:
+            // a) @@prop, corresponds to setting this.prop = payload
+            // b) @@prop.prop2, corresponds to setting this.prop.prop2 = payload
+            // c) @@prop.method(), corresponds to calling this.prop.method(...payload)
+            action = action.substring(ActionDispatcher.IMPLICIT_ACTION_PREFIX.length);
+            var target = this;
+            var properties = action.split(&apos;.&apos;);
+            while (properties.length &gt; 1) {
+                target = target[properties.shift()];
+            }
+            var property = properties[0];
+            if (property.substring(property.length - 2) === &apos;()&apos;) {
+                // Calling Method
+                var method = property.substring(0, property.length - 2);
+                retVal = target[method](...payload.map(StoreSerializer.valueFromJSON));
+            }
+            else {
+                // Setting Property
+                target[property] = StoreSerializer.valueFromJSON(...payload);
+            }
+            preventPropagation = true;
+        }
+        else {
+            // It&apos;s a custom action - if we have a handler, invoke it
+            var handler = this.__actionHandlers &amp;&amp; this.__actionHandlers[action];
+            if (handler) {
+                if (handler.options.async) {
+                    // Ignore any async actions while propagating - we print out a warning.
+                    // Either the user intended to dispatch the async action, in which case they need to target the store directly (otherwise it goes through the middleware)
+                    // Or, they&apos;re using the same name for both synchronous and asynchronous actions, which is a bad idea.
+                    console.warn(&apos;Ignoring an asynchronous handler for action &quot;&apos; + action + &apos;&quot; while propagating. Asynchronous actions can only be dispatched directly to the target store.&apos;);
+                }
+                else {
+                    retVal = this[handler.name](...payload);
+                    preventPropagation = (retVal !== undefined) || (handler.options.propagate === false);
+                }
+            }
+        }
+
+        // By returning a value, an action handler can prevent the action from
+        // being propagated to sub-stores
+        if (preventPropagation) {
+            return retVal;
+        }
+
+        // Dispatch the action to each of the sub-stores
+        var subStores = this.__data.subStores;
+        for (var key in subStores) {
+            var store = subStores[key];
+            if (store &amp;&amp; store._doDispatch) {
+                store._doDispatch(action, payload);
+            }
+        }
+    }
+
+    // Dispatch an action downwards to the target store. This allows you to dispatch an action on a parent store that&apos;s directed
+    // at only a single child:
+    // * store.dispatch(&apos;ACTION&apos;) will broadcast &apos;ACTION&apos; from the root (so all child stores that listen to it will handle it)
+    // * store.dispatch(&apos;substore/ACTION&apos;) is equivalent to store.substore.dispatch(&apos;ACTION&apos;)
+    _dispatchDown(action, payload) {
+        var route = action.split(&apos;/&apos;);
+        action = route.pop();
+
+        var store = this;
+        for (var i = 0; i &lt; route.length; i++) {
+            store = store.__data.subStores[route[i]];
+
+            if (!store) {
+                // Nothing to dispatch if we can&apos;t find the store
+                return;
+            }
+        }
+
+        return store._doDispatch(action, payload);
+    }
+
+    // Handle an action on the current store, passing it through any installed middleware.
+    _dispatchWithMiddleware(action, payload, middleware, ...args) {
+        if (middleware &amp;&amp; !ActionDispatcher.active) {
+            var next = (newAction, ...newPayload) =&gt; {
+                if (newAction) {
+                    return this._dispatchWithMiddleware(newAction, newPayload, ...args);
+                }
+                return this._dispatchWithMiddleware(action, payload, ...args);
+            };
+            return middleware(this, action, payload, next);
+        }
+
+        if (typeof action !== &apos;string&apos;) {
+            if (ActionDispatcher.active &amp;&amp; typeof action === &apos;function&apos;) {
+                throw new Error(&apos;Cannot dispatch an asynchronous action from a synchronous action&apos;);
+            }
+            throw new Error(&apos;Action name must be a string&apos;);
+        }
+
+        let retVal;
+        try {
+            ActionDispatcher.start(action);
+            retVal = this._dispatchDown(action, payload);
+        }
+        catch (e) {
+            // Even if there&apos;s an error, we still try to end the action, so other code can continue.
+            ActionDispatcher.end(action, true);
+            throw e;
+        }
+        ActionDispatcher.end(action);
+
+        return retVal;
+    }
+
+    // Dispatch an action upwards to the parent store. This allows you to dispatch an action on a child store,
+    // and have it go through the parent middleware.
+    // As the action is dispatched upwards, the path back down to the target store is encoded, so the action can be routed back down to the target store.
+    _dispatchUp(action, payload, origin, route) {
+
+        // Do we need to continue propagating upwards?
+        var parent = this.__data.parent;
+        if (parent) {
+            // TODO: We could optimize this, to jump straight to the root
+            return parent._dispatchUp(action, payload, origin, this.__data.name + &apos;/&apos; + route);
+        }
+
+        var middleware = this.__data.middleware;
+
+        // We&apos;re at the root, so change direction and dispatch down. There are two cases:
+        // 1) Action is a string - in which case we can collapse the route+action to a single string
+        if (typeof action === &apos;string&apos;) {
+            return this._dispatchWithMiddleware(route + action, payload, ...middleware);
+        }
+        // 2) Action isn&apos;t a string - in which case we need to dispatch it on the origin, but with the parent&apos;s middleware
+        return origin._dispatchWithMiddleware(action, payload, ...middleware);
+    }
+
+    /**
+     * Dispatch the given action to the store, with any arguments passed as the action&apos;s payload.
+     *
+     * @param {string | Function} action The name of the action, or a function (asynchronous action).
+     * @param {...*} payload The payload to pass to the action handler (you can pass multiple arguments).
+     */
+    dispatch(action, ...payload) {
+        // Check for async actions - these just get called straight away (it&apos;s syntactic sugar)
+        var handler = this.__actionHandlers &amp;&amp; this.__actionHandlers[action];
+        if (handler &amp;&amp; handler.options.async) {
+            return this[handler.name](...payload);
+        }
+
+        return this._dispatchUp(action, payload, this, &apos;&apos;);
+    }
+
+    /**
+     * Returns the parent store of the currents store. If the store is inside an array or map (e.g. `@State.byRefArray`, or
+     * `@State.byRefMap`), this is the store that contains the array/map, not the array/map object itself.
+     *
+     * @return {Store} The parent store (or `undefined` if it&apos;s a top-level store).
+     */
+    getParentStore() {
+        return this.__data.parent;
+    }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

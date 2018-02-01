@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">@twist/react/src/BaseComponent.jsx | Twist</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="React... with a twist!"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Twist"><meta property="twitter:description" content="React... with a twist!"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/adobe/twist"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#babel-plugin-transform-src-transforms">babel-plugin-transform/src/transforms</a><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DecoratorDefinition">DecoratorDefinition</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src">core/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/BaseStore.jsx~BaseStore.html">BaseStore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Binder.jsx~Binder.html">Binder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/CollectionBinder.jsx~CollectionBinder.html">CollectionBinder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Disposable.jsx~Disposable.html">Disposable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObjectId.jsx~ObjectId.html">ObjectId</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableArray.jsx~ObservableArray.html">ObservableArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableMap.jsx~ObservableMap.html">ObservableMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableSet.jsx~ObservableSet.html">ObservableSet</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Scope.jsx~Scope.html">Scope</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Signal.jsx~Signal.html">Signal</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/SignalDispatcher.jsx~SignalDispatcher.html">SignalDispatcher</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src-decorators">core/src/decorators</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/decorators/State.jsx~State.html">State</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Abstract">Abstract</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Bind">Bind</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Cache">Cache</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Debounce">Debounce</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Delay">Delay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Memoize">Memoize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Observable">Observable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Prototype">Prototype</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Throttle">Throttle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Wrap">Wrap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-state">state</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src-middleware">core/src/middleware</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-protectorMiddleware">protectorMiddleware</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-remoteDevMiddleware">remoteDevMiddleware</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-thunkMiddleware">thunkMiddleware</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#react-src">react/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/react/src/BaseComponent.jsx~Component.html">Component</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/react/src/BaseVirtualComponent.jsx~BaseVirtualComponent.html">BaseVirtualComponent</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">@twist/react/src/BaseComponent.jsx</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/*
+ *  Copyright 2016 Adobe Systems Incorporated. All rights reserved.
+ *  This file is licensed to you under the Apache License, Version 2.0 (the &quot;License&quot;);
+ *  you may not use this file except in compliance with the License. You may obtain a copy
+ *  of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software distributed under
+ *  the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ *  OF ANY KIND, either express or implied. See the License for the specific language
+ *  governing permissions and limitations under the License.
+ *
+ */
+
+import React from &apos;react&apos;;
+
+import { Binder, Disposable, SignalDispatcher, Scope, TaskQueue } from &apos;@twist/core&apos;;
+import { definedAttributes, getEventHandler } from &apos;./internal/AttributeUtils&apos;;
+
+// It&apos;s possible for two render functions to have a cyclic dependency, where one updating
+// invalidates the other. Because of this, if we detect too many updates in the same stack,
+// we abort (otherwise the program could hang in an infinite loop).
+const REPEATED_UPDATE_LIMIT = 50;
+
+let BinderRecordChange = Binder.recordChange;
+let BinderRecordEvent = Binder.recordEvent;
+let noop = () =&gt; undefined;
+
+let _scope = Symbol(&apos;scope&apos;);
+let _props = Symbol(&apos;props&apos;);
+let _newProps = Symbol(&apos;newProps&apos;);
+
+/** private **/
+export let _originalRender = Symbol(&apos;originalRender&apos;);
+/** private **/
+export let _getProp = Symbol(&apos;getProp&apos;);
+
+// Utility for hooking into existing methods
+function replaceExistingMethod(obj, name, newMethod) {
+    let originalMethod = obj[name] &amp;&amp; obj[name].bind(obj);
+    obj[name] = newMethod(originalMethod || noop);
+}
+
+export default class Component extends React.PureComponent {
+
+    constructor(props, context) {
+        super(props, context);
+        this[_props] = props || {};
+
+        if (!props || (!this.fork &amp;&amp; !context)) {
+            console.warn(`You must call super(props, context) from the constructor of a component -
+            if the class is not a component, don&apos;t decorate it with @Component!`);
+        }
+
+        // Swap out the render function, so we can bind to it (telling React to re-render when it needs to)
+        this[_originalRender] = this.render;
+        let binder;
+        replaceExistingMethod(this, &apos;render&apos;, originalRender =&gt; () =&gt; {
+            if (!binder) {
+                // Create a new binder: This always executes the getter immediately, so we just read it back
+                // from the previousValue. For future updates, we&apos;ll get called when the binder is invalidated.
+                // Note that we do the forceUpdate() only if the output of the render function changed - this is
+                // because forceUpdate is expensive, so we can avoid doing unnecessary work (and also the watch
+                // only gets triggered when the render contents actually change)
+                let isQueued = false;
+                let updateCount = 0;
+                let clearUpdateCount = () =&gt; updateCount = 0;
+                let forceUpdate = () =&gt; {
+                    isQueued = false;
+                    if (binder.dirty) {
+
+                        // This detects if we&apos;re executing forceUpdate() more than a certain number of times on
+                        // the same call stack, so we can detect if we&apos;re in an infinite loop. If we have two
+                        // render functions that are repeatedly invalidating one another, this allows us to abort.
+                        !updateCount &amp;&amp; setTimeout(clearUpdateCount);
+                        if (updateCount++ &gt; REPEATED_UPDATE_LIMIT) {
+                            console.error(`\`${this.constructor.name}\` is in a repeating render loop. Check for cyclic dependencies between observables.`);
+                            return;
+                        }
+
+                        // Tell React to re-render
+                        this.forceUpdate();
+                    }
+                };
+                let onInvalidate = () =&gt; {
+                    // Normally we throttle updates (in case a component changes a lot!), but sometimes this is
+                    // undesirable - e.g. if the component contains input fields, you may want them to update immediately,
+                    // no matter how fast the value changes (otherwise you get artifacts like the cursor moving to the end
+                    // of the input). You have to explicitly turn this off, via `@Component({throttleUpdates: false})`.
+                    if (this.throttleUpdates === false) {
+                        // PERFORMANCE DANGER ZONE
+                        // Without throttling, we&apos;ll do a force update on _every_ change to an observable, so if you
+                        // change multiple observables at once, it&apos;ll re-render multiple times (rather than batching them)
+                        forceUpdate();
+                        return;
+                    }
+
+                    // Throttling: When invalidated, we&apos;ll only update at most once per rAF.
+                    if (!isQueued) {
+                        if (!TaskQueue.running) {
+                            // If we&apos;re already executing the task queue, then any tasks we push will get executed
+                            // straight away, so there&apos;s no need to do an immediate update as well.
+                            forceUpdate();
+                        }
+                        TaskQueue.push(forceUpdate);
+                        isQueued = true;
+                    }
+                };
+                binder = this.link(new Binder(originalRender, undefined, true, onInvalidate, undefined, this));
+            }
+            else {
+                binder.apply();
+            }
+
+            // React forbids returning `undefined` from render; we must return null instead.
+            return binder.previousValue !== undefined ? binder.previousValue : null;
+        });
+
+        // Swap out the componentWillUpdate:
+        replaceExistingMethod(this, &apos;componentWillUpdate&apos;, originalMethod =&gt; (newProps, newState) =&gt; {
+            // We need to remember the new props while updating, because our Binder change events might
+            // trigger somebody to read an @Attribute, before React has set the new props - this is a bit ugly, but necessary.
+            // (Note, triggering the Binder changes on componentDidUpdate avoids this problem, but causes multiple renders for a single update).
+            this[_newProps] = newProps;
+
+            for (let key in this[_props]) {
+                // We have to signal a change if any of the props change, so that any watches that depend on them will trigger!
+                if (this[_props][key] !== newProps[key]) {
+                    BinderRecordChange(this, &apos;props.&apos; + key);
+                }
+            }
+            for (let key in newProps) {
+                // Also check for new props that were added
+                if (!this[_props].hasOwnProperty(key)) {
+                    BinderRecordChange(this, &apos;props.&apos; + key);
+                }
+            }
+
+            originalMethod(newProps, newState);
+        });
+
+        // Swap out the componentDidUpdate, so we reset the newProps after they&apos;ve been assigned
+        replaceExistingMethod(this, &apos;componentDidUpdate&apos;, originalMethod =&gt; (prevProps, prevState) =&gt; {
+            this[_newProps] = undefined;
+            originalMethod(prevProps, prevState);
+        });
+
+        // Handle scope
+        this[_scope] = this.context &amp;&amp; this.context.scope;
+        if (this.fork) {
+            this[_scope] = this.link(this[_scope] ? this[_scope].fork() : new Scope);
+            replaceExistingMethod(this, &apos;getChildContext&apos;, originalMethod =&gt; () =&gt; {
+                let context = originalMethod() || {};
+                context.scope = this[_scope];
+                return context;
+            });
+        }
+        else if (!this[_scope]) {
+            // Note: We don&apos;t error here, because sometimes people decorate a class that&apos;s not a component with @Component.
+            // If scope is actually used, there will still be an error further down the line, but this warning should help explain it!
+            let className = this.constructor.name;
+            console.warn(`\`${className}\` was instantiated at the top-level without a forked scope - \`@Component({ fork: false })\` is not supported for top-level components.`);
+        }
+
+        // Make sure we dispose after unmounting
+        replaceExistingMethod(this, &apos;componentWillUnmount&apos;, originalMethod =&gt; () =&gt; {
+            originalMethod();
+            this.dispose();
+        });
+    }
+
+    /**
+     * Accessor for props - this is necessary for rendering to work if you access props directly in the renderer.
+     * However, normal @Attribute accessors don&apos;t go through here (they access the internal [_props] instead),
+     * so that the component doesn&apos;t need to re-render if a prop that it doesn&apos;t use changes.
+     *
+     * We encourage using @Attribute rather than accessing props directly, for these performance reasons.
+     * @type {object}
+     */
+    get props() {
+        Binder.active &amp;&amp; BinderRecordEvent(this, &apos;props&apos;);
+        return this[_props];
+    }
+    set props(newProps) {
+        if (this[_props] !== newProps) {
+            this[_props] = newProps;
+            BinderRecordChange(this, &apos;props&apos;);
+        }
+    }
+
+    /**
+     * Method for obtaining the current value of a prop - this is used by @Attribute so it can read the new
+     * props immediately after componentWillUpdate (but before they&apos;ve been set by React)
+     * @private
+     */
+    [_getProp](name) {
+        return this[_newProps] ? this[_newProps][name] : this[_props][name];
+    }
+
+    /**
+     * Special getter for accessing scope
+     */
+    get scope() {
+        return this[_scope];
+    }
+
+    /**
+     * Special getter for accessing children
+     */
+    get children() {
+        return this.renderChildren();
+    }
+
+    /**
+     * Rendering child elements
+     */
+    renderChildren(name = &apos;children&apos;, args) {
+        if (!args &amp;&amp; name instanceof Array) {
+            args = name;
+            name = &apos;children&apos;;
+        }
+        if (args &amp;&amp; !(args instanceof Array)) {
+            throw new Error(&apos;args parameter to renderChildren() must be an array&apos;);
+        }
+        args = args || [];
+
+        // React doesn&apos;t support namespaced tags/attributes, so need to strip out colons
+        name = name.replace(/:/g, &apos;_&apos;);
+
+        Binder.active &amp;&amp; BinderRecordEvent(this,  &apos;props.&apos; + name);
+        let children = this.props[name];
+
+        // Apply the arguments
+        if (typeof children === &apos;function&apos;) {
+            children = children(...args);
+        }
+        else if (children instanceof Array) {
+            children = children.map(child =&gt; typeof child === &apos;function&apos; ? child(...args) : child);
+        }
+
+        return children;
+    }
+
+    /**
+     * Support undeclaredAttributes
+     * Note: Right now this takes a prefix, not a namespace, because React doesn&apos;t support namespaced attributes
+     */
+    undeclaredAttributes(prefix) {
+        let undeclaredAttributes = {};
+        let attributes = this[definedAttributes] || {};
+        Object.keys(this.props).forEach(name =&gt; {
+            if (!attributes[name]) {
+                let childName = name;
+                let prefixIndex = prefix &amp;&amp; name.indexOf(prefix);
+                if (prefixIndex === 0) {
+                    childName = childName.substring(prefix.length);
+                }
+                if (!prefix || prefixIndex === 0) {
+                    undeclaredAttributes[childName] = this.props[name];
+                }
+            }
+        });
+        return undeclaredAttributes;
+    }
+
+    /**
+     *  Override trigger because we need to handle custom events
+     */
+    trigger(eventName, ...args) {
+        if (!eventName) {
+            return;
+        }
+
+        // Handle triggering custom events:
+        let camelCaseName = getEventHandler(eventName);
+        let handler = this[_props][camelCaseName];
+        if (typeof handler === &apos;function&apos;) {
+            handler(...args);
+        }
+        else if (handler) {
+            console.warn(`Ignoring non-function event handler \`${camelCaseName}\`.`);
+        }
+
+        return SignalDispatcher.prototype.trigger.call(this, eventName, ...args);
+    }
+}
+
+/**
+ * Copy over the methods from Disposable and SignalDispatcher
+ */
+
+let copyPrototype = (prototypeObj) =&gt; {
+    Object.getOwnPropertyNames(prototypeObj).forEach(key =&gt; {
+        if (!Component.prototype.hasOwnProperty(key)) {
+            Component.prototype[key] = prototypeObj[key];
+        }
+    });
+};
+
+copyPrototype(Disposable.prototype);
+copyPrototype(SignalDispatcher.prototype);
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

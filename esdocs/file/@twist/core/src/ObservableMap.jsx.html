@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">@twist/core/src/ObservableMap.jsx | Twist</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="React... with a twist!"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Twist"><meta property="twitter:description" content="React... with a twist!"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/adobe/twist"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#babel-plugin-transform-src-transforms">babel-plugin-transform/src/transforms</a><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DecoratorDefinition">DecoratorDefinition</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src">core/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/BaseStore.jsx~BaseStore.html">BaseStore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Binder.jsx~Binder.html">Binder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/CollectionBinder.jsx~CollectionBinder.html">CollectionBinder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Disposable.jsx~Disposable.html">Disposable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObjectId.jsx~ObjectId.html">ObjectId</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableArray.jsx~ObservableArray.html">ObservableArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableMap.jsx~ObservableMap.html">ObservableMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableSet.jsx~ObservableSet.html">ObservableSet</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Scope.jsx~Scope.html">Scope</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Signal.jsx~Signal.html">Signal</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/SignalDispatcher.jsx~SignalDispatcher.html">SignalDispatcher</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src-decorators">core/src/decorators</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/decorators/State.jsx~State.html">State</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Abstract">Abstract</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Bind">Bind</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Cache">Cache</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Debounce">Debounce</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Delay">Delay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Memoize">Memoize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Observable">Observable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Prototype">Prototype</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Throttle">Throttle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Wrap">Wrap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-state">state</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src-middleware">core/src/middleware</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-protectorMiddleware">protectorMiddleware</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-remoteDevMiddleware">remoteDevMiddleware</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-thunkMiddleware">thunkMiddleware</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#react-src">react/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/react/src/BaseComponent.jsx~Component.html">Component</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/react/src/BaseVirtualComponent.jsx~BaseVirtualComponent.html">BaseVirtualComponent</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">@twist/core/src/ObservableMap.jsx</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/*
+ *  Copyright 2016 Adobe Systems Incorporated. All rights reserved.
+ *  This file is licensed to you under the Apache License, Version 2.0 (the &quot;License&quot;);
+ *  you may not use this file except in compliance with the License. You may obtain a copy
+ *  of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software distributed under
+ *  the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ *  OF ANY KIND, either express or implied. See the License for the specific language
+ *  governing permissions and limitations under the License.
+ *
+ */
+
+import ObservableBase from &apos;./internal/ObservableBase&apos;;
+
+import Signal from &apos;./Signal&apos;;
+import Binder from &apos;./Binder&apos;;
+
+/**
+ * @summary Wrapper for maps so that they work with Twist&apos;s data binding.
+ *
+ * @description
+ * A wrapper around the native JavaScript Map object to help Twist know when a change
+ * occurs within the object.
+ */
+export default class ObservableMap extends ObservableBase {
+
+    constructor(base = new Map) {
+        super();
+        this._swapItems(base);
+    }
+
+    /** @private */
+    _swapItems(base) {
+        if (base instanceof Map) {
+            this.base = base;
+        }
+        else {
+            this.base = new Map;
+            for (let key in base) {
+                this.base.set(key, base[key]);
+            }
+        }
+    }
+
+    /**
+     * Replaces the Map wrapped by ObservableMap
+     *
+     * @param {Map|Object} items The new Map or Object used to replace the ObservableMap&apos;s contents
+     */
+    swapItems(items) {
+        this._swapItems(items);
+        Signal.trigger(this, &apos;change&apos;);
+    }
+
+    /**
+     * Returns a boolean for the presence of a given key
+     *
+     * @param key The key to check
+     */
+    has(key) {
+        if (Binder.active) {
+            Binder.recordEvent(this, &apos;&apos; + key);
+            Binder.recordEvent(this, &apos;change&apos;);
+        }
+        return this.base.has(key);
+    }
+
+    /**
+     * Returns the value stored for a given key
+     *
+     * @param key The key to retrieve the value of
+     */
+    get(key) {
+        if (Binder.active) {
+            Binder.recordEvent(this, &apos;&apos; + key);
+            Binder.recordEvent(this, &apos;change&apos;);
+        }
+        return this.base.get(key);
+    }
+
+    /**
+     * Creates a new entry in the map
+     *
+     * @param key The key of the new entry
+     * @param value The value of the new entry
+     * @returns {ObservableMap} The map itself (allowing you to chain calls to set).
+     */
+    set(key, value) {
+        if (this.base.get(key) === value) {
+            return;
+        }
+        this.base.set(key, value);
+        Signal.trigger(this, &apos;&apos; + key);
+        Signal.trigger(this, &apos;change&apos;);
+        return this;
+    }
+
+    /**
+     * Removes all entries from the map
+     */
+    clear() {
+        var keys = [];
+        this.base.forEach((value, key) =&gt; keys.push(key));
+        this.base.clear();
+
+        keys.forEach((key) =&gt; Signal.trigger(this, &apos;&apos; + key));
+        Signal.trigger(this, &apos;change&apos;);
+    }
+
+    /**
+     * Deletes the entry under a given key
+     * @param key The key to be removed
+     * @returns {Boolean} Whether the delete was successful
+     */
+    delete(key) {
+        let success = this.base.delete(key);
+
+        Signal.trigger(this, &apos;&apos; + key);
+        Signal.trigger(this, &apos;change&apos;);
+        return success;
+    }
+
+    /**
+     * Returns the number of keys in the map
+     */
+    get size() {
+        Binder.active &amp;&amp; Binder.recordEvent(this, &apos;change&apos;);
+        return this.base.size;
+    }
+
+    /**
+     * Alias for size
+     */
+    get length() {
+        return this.size;
+    }
+
+}
+
+
+var MapPrototype = Map.prototype;
+var ObservableMapPrototype = ObservableMap.prototype;
+
+function createMethod(fn) {
+    return function() {
+        // Make sure we detect changes to the result of this method when the change event is recorded.
+        Binder.active &amp;&amp; Binder.recordEvent(this, &apos;change&apos;);
+        return fn.apply(this.base, arguments);
+    };
+}
+
+var props = Object.getOwnPropertyNames(MapPrototype);
+for (var i = 0, l = props.length; i &lt; l; ++i) {
+    var key = props[i];
+    if (!ObservableMapPrototype.hasOwnProperty(key)) {
+        ObservableMapPrototype[key] = createMethod(MapPrototype[key]);
+    }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

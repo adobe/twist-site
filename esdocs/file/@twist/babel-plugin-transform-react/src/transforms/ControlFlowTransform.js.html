@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../../">
+  <title data-ice="title">@twist/babel-plugin-transform-react/src/transforms/ControlFlowTransform.js | Twist</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="React... with a twist!"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Twist"><meta property="twitter:description" content="React... with a twist!"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/adobe/twist"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#babel-plugin-transform-src-transforms">babel-plugin-transform/src/transforms</a><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DecoratorDefinition">DecoratorDefinition</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src">core/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/BaseStore.jsx~BaseStore.html">BaseStore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Binder.jsx~Binder.html">Binder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/CollectionBinder.jsx~CollectionBinder.html">CollectionBinder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Disposable.jsx~Disposable.html">Disposable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObjectId.jsx~ObjectId.html">ObjectId</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableArray.jsx~ObservableArray.html">ObservableArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableMap.jsx~ObservableMap.html">ObservableMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableSet.jsx~ObservableSet.html">ObservableSet</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Scope.jsx~Scope.html">Scope</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Signal.jsx~Signal.html">Signal</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/SignalDispatcher.jsx~SignalDispatcher.html">SignalDispatcher</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src-decorators">core/src/decorators</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/decorators/State.jsx~State.html">State</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Abstract">Abstract</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Bind">Bind</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Cache">Cache</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Debounce">Debounce</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Delay">Delay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Memoize">Memoize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Observable">Observable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Prototype">Prototype</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Throttle">Throttle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Wrap">Wrap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-state">state</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src-middleware">core/src/middleware</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-protectorMiddleware">protectorMiddleware</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-remoteDevMiddleware">remoteDevMiddleware</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-thunkMiddleware">thunkMiddleware</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#react-src">react/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/react/src/BaseComponent.jsx~Component.html">Component</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/react/src/BaseVirtualComponent.jsx~BaseVirtualComponent.html">BaseVirtualComponent</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">@twist/babel-plugin-transform-react/src/transforms/ControlFlowTransform.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/*
+ *  Copyright 2017 Adobe Systems Incorporated. All rights reserved.
+ *  This file is licensed to you under the Apache License, Version 2.0 (the &quot;License&quot;);
+ *  you may not use this file except in compliance with the License. You may obtain a copy
+ *  of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software distributed under
+ *  the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ *  OF ANY KIND, either express or implied. See the License for the specific language
+ *  governing permissions and limitations under the License.
+ *
+ */
+
+const t = require(&apos;babel-types&apos;);
+const PathUtils = require(&apos;@twist/babel-plugin-transform/src/PathUtils&apos;);
+
+module.exports = class ControlFlowTransform {
+
+    static apply(path) {
+        switch (PathUtils.getJSXElementName(path)) {
+        case &apos;if&apos;:
+        case &apos;unless&apos;:
+            this.transformIf(path);
+            break;
+        case &apos;elseif&apos;:
+        case &apos;else&apos;:
+            // We handle elseif/else cases within the if/unless blocks. Just remove them here.
+            path.remove();
+            break;
+        case &apos;repeat&apos;:
+            this.transformRepeat(path);
+            break;
+        case &apos;using&apos;:
+            this.transformUsing(path);
+            break;
+        case &apos;g&apos;:
+            this.transformGroup(path);
+            break;
+        default:
+            return false;
+        }
+        return true;
+    }
+
+    static transformIf(path) {
+        // Find the subsequent `elseif` and/or `if` blocks. If we encounter any other sibling JSXElement, stop searching.
+        let elsePath;
+        const conditionPaths = [ path ];
+        for (let i = path.key + 1, siblingPath; (siblingPath = path.getSibling(i)) &amp;&amp; siblingPath.node; i++) {
+            if (siblingPath.node.type === &apos;JSXElement&apos;) {
+                const name = PathUtils.getJSXElementName(siblingPath);
+                if (name === &apos;elseif&apos;) {
+                    conditionPaths.push(siblingPath);
+                }
+                else if (name === &apos;else&apos;) {
+                    elsePath = siblingPath;
+                }
+                else {
+                    break;
+                }
+            }
+        }
+
+        // Get the condition expression, and the children contents, for each case.
+        const cases = conditionPaths.map((path) =&gt; {
+            let condition = PathUtils.getAttributeValue(path, &apos;condition&apos;).expression;
+            if (path.node.openingElement.name.name === &apos;unless&apos;) {
+                condition = t.unaryExpression(&apos;!&apos;, condition);
+            }
+            return {
+                condition,
+                children: PathUtils.jsxChildrenToJS(path.node.children)
+            };
+        });
+
+        // In reverse order, merge the cases into a JS expression using ternary operators.
+        const expr = cases.reduceRight((expr, { condition, children }) =&gt; {
+            return t.conditionalExpression(condition, children, expr);
+        }, PathUtils.jsxChildrenToJS(elsePath &amp;&amp; elsePath.node.children));
+
+        path.replaceWith(PathUtils.maybeWrapJSXExpression(path, expr));
+    }
+
+    static transformRepeat(path) {
+        // Grab the collection expression, such as `coll`, and the value expression, such as `(item, index)`,
+        // from either the `&lt;repeat for={}&gt;` syntax or the `&lt;repeat collection={} as={}&gt;` syntax.
+        let valueExpr, collExpr;
+        let forAttr = PathUtils.getAttributeValue(path, &apos;for&apos;);
+        if (forAttr) {
+            valueExpr = forAttr.expression.left;
+            collExpr = forAttr.expression.right;
+        }
+        else {
+            valueExpr = PathUtils.getAttributeValue(path, &apos;as&apos;).expression;
+            collExpr = PathUtils.getAttributeValue(path, &apos;collection&apos;).expression;
+        }
+
+        // If the user included the `index` attribute, we need two arguments to the `map` function.
+        let mapArgs = [];
+        if (t.isSequenceExpression(valueExpr)) {
+            mapArgs.push(valueExpr.expressions[0]);
+            mapArgs.push(valueExpr.expressions[1]);
+        }
+        else {
+            mapArgs.push(valueExpr);
+        }
+
+        // React expects a normal array to be returned; we&apos;ll use Torq&apos;s `mapToArray` if available,
+        // otherwise fall back to normal array `map`.
+        let mapMemberExpr = t.logicalExpression(&apos;||&apos;,
+            t.memberExpression(collExpr, t.identifier(&apos;mapToArray&apos;)),
+            t.memberExpression(collExpr, t.identifier(&apos;map&apos;)));
+
+        // Auto-add a key to the children, if it&apos;s a single child and it doesn&apos;t already have a key
+        let elements = path.node.children.filter(t.isJSXElement);
+        if (elements.length === 1) {
+            let attributes = elements[0].openingElement.attributes;
+            let hasKeyAttribute = attributes.some(attr =&gt; t.isJSXAttribute(attr) &amp;&amp; attr.name &amp;&amp; attr.name.name === &apos;key&apos;);
+            if (!hasKeyAttribute) {
+                // Make sure we have an index:
+                if (!mapArgs[1]) {
+                    mapArgs.push(t.identifier(&apos;index&apos;));
+                }
+                // Add a key:
+                attributes.push(t.jSXAttribute(t.jSXIdentifier(&apos;key&apos;), t.jSXExpressionContainer(mapArgs[1])));
+                PathUtils.warning(path, &apos;Added key={ index } attribute to contents of &lt;repeat&gt; - please update with a custom key based on item uniqueness.&apos;);
+            }
+        }
+
+        let expr = t.conditionalExpression(collExpr,
+            t.callExpression(t.memberExpression(mapMemberExpr, t.identifier(&apos;call&apos;)), [
+                collExpr,
+                t.arrowFunctionExpression(mapArgs, PathUtils.jsxChildrenToJS(path.node.children))
+            ]),
+            t.nullLiteral()
+        );
+
+        path.replaceWith(PathUtils.maybeWrapJSXExpression(path, expr));
+    }
+
+    static transformUsing(path) {
+        const valueExpr = PathUtils.getAttributeValue(path, &apos;value&apos;).expression;
+        const asName = PathUtils.getAttributeValue(path, &apos;as&apos;).expression;
+
+        // TODO: We could probably hoist the variable declaration up, and avoid the extra function call.
+        let expr = t.callExpression(t.arrowFunctionExpression([],
+            t.blockStatement([
+                t.variableDeclaration(&apos;const&apos;, [ t.variableDeclarator(asName, valueExpr) ]),
+                t.returnStatement(t.conditionalExpression(asName, PathUtils.jsxChildrenToJS(path.node.children), t.nullLiteral()))
+            ])
+        ), []);
+
+        path.replaceWith(PathUtils.maybeWrapJSXExpression(path, expr));
+    }
+
+    static transformGroup(path) {
+        // A &lt;g&gt; group can just be represented as an array (in React 16+).
+
+        // We add keys to each element in the group, otherwise React will complain.
+        let elements = path.node.children.filter(t.isJSXElement);
+        for (let i = 0; i &lt; elements.length; i++) {
+            let attributes = elements[i].openingElement.attributes;
+            let hasKeyAttribute = attributes.some(attr =&gt; t.isJSXAttribute(attr) &amp;&amp; attr.name &amp;&amp; attr.name.name === &apos;key&apos;);
+            if (!hasKeyAttribute) {
+                attributes.push(t.jSXAttribute(t.jSXIdentifier(&apos;key&apos;), t.stringLiteral(String(i))));
+            }
+        }
+
+        path.replaceWith(PathUtils.maybeWrapJSXExpression(path, PathUtils.jsxChildrenToJS(path.node.children)));
+    }
+};
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

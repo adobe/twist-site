@@ -1,0 +1,47 @@
+[
+  {
+    "name": "exports.pushToFunctionBody",
+    "filePath": "@twist/babel-plugin-transform/src/PathUtils.js",
+    "lines": [
+      {
+        "lineNumber": 118,
+        "line": "    /**"
+      },
+      {
+        "lineNumber": 119,
+        "line": "     * Push the given expression(s) to the start of the body of the given function. This handles arrow functions too"
+      },
+      {
+        "lineNumber": 120,
+        "line": "     * (it converts the arrow function body to a block with a return statement, if it's an expression)."
+      },
+      {
+        "lineNumber": 121,
+        "line": "     *"
+      },
+      {
+        "lineNumber": 122,
+        "line": "     * @param {Path} path"
+      },
+      {
+        "lineNumber": 123,
+        "line": "     * @return {Statement|Array.<Statement>} Statement(s) to push to the start of the function body."
+      },
+      {
+        "lineNumber": 124,
+        "line": "     */"
+      },
+      {
+        "lineNumber": 125,
+        "line": "    static pushToFunctionBody(path, expressions) {"
+      }
+    ],
+    "codeParams": [
+      "path",
+      "expressions"
+    ],
+    "docParams": [
+      "path"
+    ]
+  }
+]

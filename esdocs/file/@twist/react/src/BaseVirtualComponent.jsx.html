@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">@twist/react/src/BaseVirtualComponent.jsx | Twist</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="React... with a twist!"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Twist"><meta property="twitter:description" content="React... with a twist!"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/adobe/twist"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#babel-plugin-transform-src-transforms">babel-plugin-transform/src/transforms</a><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DecoratorDefinition">DecoratorDefinition</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src">core/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/BaseStore.jsx~BaseStore.html">BaseStore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Binder.jsx~Binder.html">Binder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/CollectionBinder.jsx~CollectionBinder.html">CollectionBinder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Disposable.jsx~Disposable.html">Disposable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObjectId.jsx~ObjectId.html">ObjectId</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableArray.jsx~ObservableArray.html">ObservableArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableMap.jsx~ObservableMap.html">ObservableMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableSet.jsx~ObservableSet.html">ObservableSet</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Scope.jsx~Scope.html">Scope</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Signal.jsx~Signal.html">Signal</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/SignalDispatcher.jsx~SignalDispatcher.html">SignalDispatcher</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src-decorators">core/src/decorators</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/decorators/State.jsx~State.html">State</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Abstract">Abstract</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Bind">Bind</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Cache">Cache</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Debounce">Debounce</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Delay">Delay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Memoize">Memoize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Observable">Observable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Prototype">Prototype</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Throttle">Throttle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Wrap">Wrap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-state">state</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src-middleware">core/src/middleware</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-protectorMiddleware">protectorMiddleware</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-remoteDevMiddleware">remoteDevMiddleware</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-thunkMiddleware">thunkMiddleware</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#react-src">react/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/react/src/BaseComponent.jsx~Component.html">Component</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/react/src/BaseVirtualComponent.jsx~BaseVirtualComponent.html">BaseVirtualComponent</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">@twist/react/src/BaseVirtualComponent.jsx</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/*
+ *  Copyright 2016 Adobe Systems Incorporated. All rights reserved.
+ *  This file is licensed to you under the Apache License, Version 2.0 (the &quot;License&quot;);
+ *  you may not use this file except in compliance with the License. You may obtain a copy
+ *  of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software distributed under
+ *  the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ *  OF ANY KIND, either express or implied. See the License for the specific language
+ *  governing permissions and limitations under the License.
+ *
+ */
+
+import { TaskQueue, Binder } from &apos;@twist/core&apos;;
+import BaseComponent from &apos;./BaseComponent&apos;;
+import { _originalRender } from &apos;./BaseComponent&apos;;
+
+let BinderRecordChange = Binder.recordChange;
+let BinderRecordEvent = Binder.recordEvent;
+
+function isNullOrWhitespace(item) {
+    return !item || /^\s+$/.test(item);
+}
+
+function isNullOrNotVirtual(item) {
+    return !item || !(item instanceof BaseVirtualComponent);
+}
+
+function isConcreteComponent(item) {
+    return (item instanceof BaseComponent) &amp;&amp; !(item instanceof BaseVirtualComponent);
+}
+
+function concreteItemTransform(item) {
+    if (isConcreteComponent(item)) {
+        BinderRecordEvent(item, &apos;virtual.children&apos;);
+        return item[_items];
+    }
+    return item;
+}
+
+function flatten(arr, skipTest, itemTransform, flattenedArr) {
+    for (let i = 0; i &lt; arr.length; i++) {
+        let item = itemTransform ? itemTransform(arr[i]) : arr[i];
+        let shouldIgnore = skipTest(item);
+        let isArray = Array.isArray(item);
+
+        if (!flattenedArr &amp;&amp; (shouldIgnore || isArray)) {
+            // Optimisation: Only create a new array when we need to
+            flattenedArr = arr.slice(0, i);
+        }
+
+        if (flattenedArr) {
+            if (isArray) {
+                flatten(item, skipTest, itemTransform, flattenedArr);
+            }
+            else if (!shouldIgnore) {
+                flattenedArr.push(item);
+            }
+        }
+    }
+    return flattenedArr || arr;
+}
+
+function instantiateContent(content, context) {
+    try {
+        let ContentClass = content.type;
+        let instance = new ContentClass(content.props, context);
+        if (isConcreteComponent(instance)) {
+            // You can mix real and virtual components, but the virtualRender method expects all
+            // components in the tree to be able to be rendered virtually. We add the necessary methods
+            // to the component instance, so that this works:
+            instance[_dirty] = false;
+            instance[_queuedUpdate] = false;
+            instance[_items] = [];
+            instance[_virtualRender] = BaseVirtualComponent.prototype[_virtualRender];
+            instance.forceUpdate = BaseVirtualComponent.prototype.forceUpdate;
+
+        }
+        return instance;
+    }
+    catch (e) {
+        // We just fall back to a plain virtual component and print an error, if we see an HTML element
+        console.error(`Unexpected virtual type \`${content.type}\`. You cannot use concrete HTML tags in a virtual component - all components must themselves be virtual.`);
+        return new BaseVirtualComponent({}, context);
+    }
+}
+
+function propsDiffer(propsA, propsB) {
+    for (let key in propsA) {
+        if (propsA.hasOwnProperty(key) &amp;&amp; propsA[key] !== propsB[key]) {
+            return true;
+        }
+    }
+    for (let key in propsB) {
+        if (propsB.hasOwnProperty(key) &amp;&amp; propsA[key] !== propsB[key]) {
+            return true;
+        }
+    }
+    return false;
+}
+
+const _dirty = Symbol(&apos;dirty&apos;);
+const _queuedUpdate = Symbol(&apos;queuedUpdate&apos;);
+const _items = Symbol(&apos;items&apos;);
+const _virtualRender = Symbol(&apos;virtualRender&apos;);
+const _linked = Symbol(&apos;linked&apos;);
+
+class LinkedData {
+    // We have to put this in an object because decorators on [] properties don&apos;t yet work (we want linked data to be a symbol)
+    @Observable component;
+}
+
+/**
+ * A Virtual Component is a special type of component that doesn&apos;t render anything to the DOM, but instead exposes a
+ * tree of nodes in JavaScript. It still has a render function, but it&apos;s not rendered by ReactDOM.
+ */
+@Component
+export default class BaseVirtualComponent {
+
+    [_dirty] = false;
+    [_queuedUpdate] = false;
+    [_items] = [];
+    [_linked] = new LinkedData;
+
+    constructor() {
+        super();
+
+        // Prevent overriding the render() method
+        if (this[_originalRender] !== BaseVirtualComponent.prototype.render) {
+            throw new Error(&apos;Virtual components do not support custom render() implementations. Instead, use a normal component that renders virtual components.&apos;);
+        }
+    }
+
+    /**
+     * Override the React forceUpdate so we do a virtual render (this throttles the rendering to the task queue)
+     * @private
+     */
+    forceUpdate() {
+        if (this[_queuedUpdate]) {
+            this[_dirty] = true;
+            return;
+        }
+
+        this[_virtualRender]();
+        this[_queuedUpdate] = true;
+
+        TaskQueue.push(() =&gt; {
+            if (this[_dirty] &amp;&amp; !this.isDisposed) {
+                this[_virtualRender]();
+                this[_dirty] = false;
+            }
+            this[_queuedUpdate] = false;
+        });
+    }
+
+    /**
+     * Virtual rendering uses the results of render function (a JSON structure describing the child nodes), and
+     * renders them virtually - this just means instantiating the virtual nodes (or updating them if props changed)
+     * so we have a virtual tree. DOM nodes (like &lt;div&gt; etc) are not allowed in the virtual tree.
+     * @private
+     */
+    [_virtualRender]() {
+        let contents = this.render() || [];
+        let items = this[_items];
+        let childContext = this.getChildContext();
+
+        if (!(contents instanceof Array)) {
+            contents = [ contents ];
+        }
+
+        // Sometimes the array can contain other arrays, so we need to flatten it out
+        // (this also strips out any null elements)
+        contents = flatten(contents, isNullOrWhitespace);
+
+        for (let i = 0; i &lt; contents.length; i++) {
+            let content = contents[i];
+            let item = items[i];
+
+            if (item &amp;&amp; !(item instanceof content.type)) {
+                item.componentWillUnmount &amp;&amp; item.componentWillUnmount();
+                this.unlink(item);
+                item = undefined;
+            }
+            if (item &amp;&amp; (propsDiffer(content.props, item.props) || propsDiffer(childContext, item.context))) {
+                item.componentWillUpdate(content.props, childContext);
+                item.props = content.props;
+                item.context = childContext;
+            }
+            if (!item) {
+                items[i] = this.link(instantiateContent(content, childContext));
+                items[i]._parent = this;
+                items[i][_virtualRender]();
+                items[i].componentDidMount &amp;&amp; items[i].componentDidMount();
+            }
+        }
+        for (let i = contents.length; i &lt; items.length; i++) {
+            let item = items[i];
+            if (item) {
+                item.componentWillUnmount &amp;&amp; item.componentWillUnmount();
+                this.unlink(item);
+            }
+        }
+        items.length = contents.length;
+
+        BinderRecordChange(this, &apos;virtual.children&apos;);
+    }
+
+    /**
+     * Overrides the renderChildren() of BaseComponent, so it can inject the children from the
+     * linked component, if it&apos;s linked!
+     */
+    renderChildren(name, args) {
+        return this[_linked].component
+            ? this[_linked].component.renderChildren(name, args)
+            : super.renderChildren(name, args);
+    }
+
+    /**
+     * Virtual components always just render their children (they&apos;re nodes in the virtual tree).
+     * If you need custom behavior (e.g. injecting other virtual nodes), you can write a real component that
+     * renders virtual components.
+     *
+     * If you try to override this, you&apos;ll get an error.
+     */
+    render() {
+        return this.renderChildren() || null;
+    }
+
+    /**
+     * This is the initialization code for a virtual component. Typically a virtual component exists
+     * alongside a concrete component, as a mechanism for configuring that component. For example,
+     * in a virtual scroller, the concrete component will render actual elements to the DOM (based on
+     * what&apos;s visible), but its children will be rendered to a virtual tree for doing the layout.
+     *
+     * A virtual component can&apos;t be rendered by ReactDOM, so instead, you need to pass the children
+     * of the concrete component to a virtual component, that will render it instead. You only need
+     * to call bindToComponent on the root virtual component - this just tells the virtual component
+     * to monitor the children of the given component, and render itself whenever they change.
+     *
+     * This method returns the virtual component, so that you can write (from a component):
+     *
+     * ```
+     * this.virtualComponent = new MyVirtualComponent().linkToComponent(this);
+     * ```
+     *
+     * @param {BaseComponent} component The component to bind to.
+     * @returns {BaseVirtualComponent} This virtual component.
+     */
+    linkToComponent(component) {
+        if (!(component instanceof BaseComponent)) {
+            throw new Error(&apos;@VirtualComponent.linkToComponent() expects an @Component as its argument&apos;);
+        }
+
+        this[_linked].component = component;
+        this.link(() =&gt; this[_linked].component = null);
+        this.forceUpdate();
+        return component.link(this);
+    }
+
+    /**
+     * The virtual children of the virtual component.
+     * @type {Array.&lt;BaseVirtualComponent&gt;}
+     */
+    get children() {
+        BinderRecordEvent(this, &apos;virtual.children&apos;);
+        return flatten(this[_items], isNullOrNotVirtual, concreteItemTransform);
+    }
+
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

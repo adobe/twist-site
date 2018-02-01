@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">@twist/babel-plugin-transform/src/PathUtils.js | Twist</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="React... with a twist!"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Twist"><meta property="twitter:description" content="React... with a twist!"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/adobe/twist"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#babel-plugin-transform-src-transforms">babel-plugin-transform/src/transforms</a><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DecoratorDefinition">DecoratorDefinition</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src">core/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/BaseStore.jsx~BaseStore.html">BaseStore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Binder.jsx~Binder.html">Binder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/CollectionBinder.jsx~CollectionBinder.html">CollectionBinder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Disposable.jsx~Disposable.html">Disposable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObjectId.jsx~ObjectId.html">ObjectId</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableArray.jsx~ObservableArray.html">ObservableArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableMap.jsx~ObservableMap.html">ObservableMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableSet.jsx~ObservableSet.html">ObservableSet</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Scope.jsx~Scope.html">Scope</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Signal.jsx~Signal.html">Signal</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/SignalDispatcher.jsx~SignalDispatcher.html">SignalDispatcher</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src-decorators">core/src/decorators</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/decorators/State.jsx~State.html">State</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Abstract">Abstract</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Bind">Bind</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Cache">Cache</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Debounce">Debounce</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Delay">Delay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Memoize">Memoize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Observable">Observable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Prototype">Prototype</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Throttle">Throttle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Wrap">Wrap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-state">state</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src-middleware">core/src/middleware</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-protectorMiddleware">protectorMiddleware</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-remoteDevMiddleware">remoteDevMiddleware</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-thunkMiddleware">thunkMiddleware</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#react-src">react/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/react/src/BaseComponent.jsx~Component.html">Component</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/react/src/BaseVirtualComponent.jsx~BaseVirtualComponent.html">BaseVirtualComponent</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">@twist/babel-plugin-transform/src/PathUtils.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/*
+ *  Copyright 2017 Adobe Systems Incorporated. All rights reserved.
+ *  This file is licensed to you under the Apache License, Version 2.0 (the &quot;License&quot;);
+ *  you may not use this file except in compliance with the License. You may obtain a copy
+ *  of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software distributed under
+ *  the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ *  OF ANY KIND, either express or implied. See the License for the specific language
+ *  governing permissions and limitations under the License.
+ *
+ */
+
+const t = require(&apos;babel-types&apos;);
+const template = require(&apos;babel-template&apos;);
+const { addNamed } = require(&apos;babel-helper-module-imports&apos;);
+
+module.exports = class PathUtils {
+
+    /**
+     * Return the string name of the given element.
+     * @param {Path&lt;JSXElement&gt;} path
+     * @return {string}
+     */
+    static getJSXElementName(path) {
+        t.assertJSXElement(path.node);
+        const nameRoot = path.node.openingElement.name;
+        if (nameRoot.namespace) {
+            return nameRoot.namespace.name + &apos;:&apos; + nameRoot.name.name;
+        }
+        else {
+            return nameRoot.name;
+        }
+    }
+
+    static getJSXAttributeName(attr) {
+        t.assertJSXAttribute(attr);
+        if (attr.name.namespace) {
+            return attr.name.namespace.name + &apos;:&apos; + attr.name.name.name;
+        }
+        return attr.name.name;
+    }
+
+    static getAttribute(path, attributeName) {
+        t.assertJSXElement(path.node);
+        const attributes = path.node.openingElement.attributes;
+        for (let i = 0; i &lt; attributes.length; i++) {
+            const attr = attributes[i];
+            if (t.isJSXAttribute(attr) &amp;&amp; this.getJSXAttributeName(attr) === attributeName) {
+                return attr;
+            }
+        }
+    }
+
+    static deleteAttribute(path, attributeName) {
+        t.assertJSXElement(path.node);
+        const attributes = path.node.openingElement.attributes;
+        for (let i = 0; i &lt; attributes.length; i++) {
+            const attr = attributes[i];
+            if (t.isJSXAttribute(attr) &amp;&amp; this.getJSXAttributeName(attr) === attributeName) {
+                attributes.splice(i, 1);
+                break;
+            }
+        }
+    }
+
+    static getAttributeValue(path, attributeName) {
+        const attr = PathUtils.getAttribute(path, attributeName);
+        return attr &amp;&amp; attr.value;
+    }
+
+    static addImportOnce(path, exportName, moduleName, options) {
+        const parent = path.scope.getProgramParent().path;
+        const importKey = exportName + &apos;@&apos; + moduleName;
+        let localName = parent.scope.getData(importKey);
+        if (!localName) {
+            localName = addNamed(path, exportName, moduleName, options);
+            parent.scope.setData(importKey, localName);
+        }
+        return localName;
+    }
+
+    /**
+     * Adds a new global symbol declaration.
+     *
+     * @param {Path} path
+     * @param {string} readableName The readable name of the variable holding the symbol.
+     * @return {Identifier} The identifier of the variable we just declared.
+     */
+    static addGlobalSymbol(path, readableName) {
+        const parent = path.scope.getProgramParent().path;
+        let declName = path.scope.generateUidIdentifier(readableName);
+        if (!parent.scope.hasGlobal(&apos;Symbol&apos;)) {
+            // We need to add Symbol as a global, otherwise it might not get imported properly
+            parent.scope.addGlobal(t.identifier(&apos;Symbol&apos;));
+        }
+        parent.scope.push({ id: declName, init: template(`Symbol(&apos;${readableName}&apos;)`)().expression });
+        return declName;
+    }
+
+    /**
+     * Test whether &quot;this&quot; is defined for the given path - we walk up the parent functions, until we find a
+     * function that&apos;s not an arrow function (in which case this is defined), or we hit the program (in which
+     * case it isn&apos;t).
+     *
+     * @param {Path} path
+     * @return {Boolean} Whether or not the given path has a defined &quot;this&quot; context.
+     */
+    static hasThisContext(path) {
+        if (!path || path.isProgram()) {
+            return false;
+        }
+        if (path.isFunction() &amp;&amp; !path.isArrowFunctionExpression()) {
+            return true;
+        }
+        return PathUtils.hasThisContext(path.getFunctionParent());
+    }
+
+    /**
+     * Push the given expression(s) to the start of the body of the given function. This handles arrow functions too
+     * (it converts the arrow function body to a block with a return statement, if it&apos;s an expression).
+     *
+     * @param {Path} path
+     * @return {Statement|Array.&lt;Statement&gt;} Statement(s) to push to the start of the function body.
+     */
+    static pushToFunctionBody(path, expressions) {
+        t.assertFunction(path.node);
+        let body = path.node.body;
+        if (!t.isBlockStatement(body)) {
+            // It must be an arrow function, if the body isn&apos;t a block (i.e. it&apos;s an expression)
+            // Convert it to a block with a return.
+            body = t.blockStatement([ t.returnStatement(body) ]);
+            path.node.body = body;
+        }
+        if (expressions instanceof Array) {
+            body.body = expressions.concat(body.body);
+        }
+        else {
+            body.body.unshift(expressions);
+        }
+    }
+
+    /**
+     * Given an array of [children of a JSX component], return an expression that represents the same children.
+     * For instance, the contents of a &lt;repeat&gt; might include multiple elements; they must be serialized into a format
+     * suitable as a return value within `collection.map()`. This is typically an array, but in cases where only a single
+     * element or text node is contained, we can just return that one item. When no items exist, returns a null expression.
+     *
+     * @param {Array&lt;Node&gt;} children
+     * @return {Expression}
+     */
+    static jsxChildrenToJS(children) {
+        if (!children) {
+            return t.nullLiteral();
+        }
+
+        children = children
+            .map(child =&gt; t.isJSXExpressionContainer(child) ? child.expression : child)
+            .filter(child =&gt; !(t.isJSXText(child) &amp;&amp; /^\s+$/.test(child.value)))
+            .map(child =&gt; t.isJSXText(child) ? t.stringLiteral(child.value.trim()) : child);
+
+        return (
+            children.length === 0 ? t.nullLiteral()
+                : children.length === 1 ? children[0]
+                    : t.arrayExpression(children)
+        );
+    }
+
+    /**
+     * If the parent element of the given `path` is a JSX Element, wrap `expression` in a JSXExpressionContainer (braces).
+     * @param {Path} path
+     * @param {Expression} expression
+     * @return {Expression}
+     */
+    static maybeWrapJSXExpression(path, expression) {
+        return t.isJSXElement(path.parent) ? t.jSXExpressionContainer(expression) : expression;
+    }
+
+    /**
+     * Return the class declaration of a path&apos;s parent class, if it has a decorator with the given name.
+     * This is often used to find a class with a specific decorator like @Component.
+     * @param {Path} path
+     * @param {string} decoratorName
+     * @return {Node&lt;ClassDeclaration&gt; | undefined}
+     */
+    static findParentClassWithDecorator(path, decoratorName) {
+        const classDeclarationPath = path.findParent(parent =&gt; t.isClassDeclaration(parent));
+
+        // See if there&apos;s an @Component decorator:
+        const decorators = classDeclarationPath &amp;&amp; classDeclarationPath.node.decorators;
+        const componentDecorator = decorators &amp;&amp; decorators.find((d, index) =&gt; {
+            // First, see if there&apos;s an originalName for the decorator - a different transform could have renamed it.
+            let decoratorPath = classDeclarationPath.get(&apos;decorators.&apos; + index);
+            let originalName = decoratorPath.getData(&apos;originalName&apos;);
+            if (originalName) {
+                return originalName === decoratorName;
+            }
+
+            // If the name didn&apos;t change, we check the actual name of the decorator
+            let expr = d.expression;
+            if (t.isCallExpression(expr)) {
+                // It could be a call expression, like @Component({ fork: true })
+                expr = expr.callee;
+            }
+            return expr &amp;&amp; expr.name === decoratorName;
+        });
+        if (componentDecorator) {
+            return classDeclarationPath;
+        }
+    }
+
+    /**
+     * If the given path has an &quot;as&quot; attribute, this removes said attribute and converts it to an array of identifiers
+     * @param {Path} path
+     * @return {Array&lt;Identifier&gt; | undefined}
+     */
+    static stripAsIdentifiers(path) {
+        const asAttr = PathUtils.getAttributeValue(path, &apos;as&apos;);
+        if (!asAttr) {
+            return;
+        }
+
+        let args = t.isSequenceExpression(asAttr.expression) ? asAttr.expression.expressions : [ asAttr.expression ];
+
+        if (!args.every(t.isIdentifier)) {
+            PathUtils.warning(path, `Ignoring &apos;as&apos; attribute that&apos;s not an identifier, or sequence of identifiers.`);
+            return;
+        }
+
+        this.deleteAttribute(path, &apos;as&apos;);
+        return args;
+    }
+
+    static warning(path, message) {
+        console.warn(`WARNING: ${message}\n   at ${path.scope.hub.file.opts.filenameRelative}:${path.node.loc.start.line}`);
+    }
+
+};
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

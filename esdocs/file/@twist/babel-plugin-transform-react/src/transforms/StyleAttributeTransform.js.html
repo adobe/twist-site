@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../../">
+  <title data-ice="title">@twist/babel-plugin-transform-react/src/transforms/StyleAttributeTransform.js | Twist</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="React... with a twist!"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Twist"><meta property="twitter:description" content="React... with a twist!"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/adobe/twist"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#babel-plugin-transform-src-transforms">babel-plugin-transform/src/transforms</a><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-DecoratorDefinition">DecoratorDefinition</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src">core/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/BaseStore.jsx~BaseStore.html">BaseStore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Binder.jsx~Binder.html">Binder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/CollectionBinder.jsx~CollectionBinder.html">CollectionBinder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Disposable.jsx~Disposable.html">Disposable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObjectId.jsx~ObjectId.html">ObjectId</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableArray.jsx~ObservableArray.html">ObservableArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableMap.jsx~ObservableMap.html">ObservableMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/ObservableSet.jsx~ObservableSet.html">ObservableSet</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Scope.jsx~Scope.html">Scope</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/Signal.jsx~Signal.html">Signal</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/SignalDispatcher.jsx~SignalDispatcher.html">SignalDispatcher</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src-decorators">core/src/decorators</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/core/src/decorators/State.jsx~State.html">State</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Abstract">Abstract</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Bind">Bind</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Cache">Cache</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Debounce">Debounce</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Delay">Delay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Memoize">Memoize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Observable">Observable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Prototype">Prototype</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Throttle">Throttle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Wrap">Wrap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-state">state</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#core-src-middleware">core/src/middleware</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-protectorMiddleware">protectorMiddleware</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-remoteDevMiddleware">remoteDevMiddleware</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-thunkMiddleware">thunkMiddleware</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#react-src">react/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/react/src/BaseComponent.jsx~Component.html">Component</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/@twist/react/src/BaseVirtualComponent.jsx~BaseVirtualComponent.html">BaseVirtualComponent</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">@twist/babel-plugin-transform-react/src/transforms/StyleAttributeTransform.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/*
+ *  Copyright 2017 Adobe Systems Incorporated. All rights reserved.
+ *  This file is licensed to you under the Apache License, Version 2.0 (the &quot;License&quot;);
+ *  you may not use this file except in compliance with the License. You may obtain a copy
+ *  of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software distributed under
+ *  the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ *  OF ANY KIND, either express or implied. See the License for the specific language
+ *  governing permissions and limitations under the License.
+ *
+ */
+
+const PathUtils = require(&apos;@twist/babel-plugin-transform/src/PathUtils&apos;);
+const t = require(&apos;babel-types&apos;);
+const camelCaseHyphens = require(&apos;@twist/babel-plugin-transform/src/camelCaseHyphens&apos;);
+const styles = require(&apos;../runtime/styles&apos;);
+
+/**
+ * Enable string style attributes, style shorthand attributes, and multiple style attributes.
+ *
+ * 1. String Attributes: React only allows objects as style attribute values (e.g. `{ color: &apos;red&apos; }`).
+ *    This allows the style attribute to be specified as a string (like in plain HTML).
+ * 2. Style Shorthand: `&lt;div style-background-color=&quot;red&quot; /&gt;` === `&lt;div style={{ backgroundColor: &apos;red&apos; }} /&gt;`.
+ * 3. Multiple Style Attributes: `&lt;div style={A} style={B} /&gt;` is roughly equivalent to `&lt;div style={merge(A, B)}&gt;`.
+ *
+ * Whenever possible, we perform these conversions statically, avoiding any runtime overhead. At compile-time, we:
+ *
+ *  - parse style strings (including `style=&quot;...&quot;`, `style={&apos;...&apos;}`, and `style={`...`}`) into objects;
+ *  - combine multiple style attributes and/or shorthands together
+ *
+ * Styles are combined at runtime only when necessary (using the &quot;styles&quot; runtime helper). This happens when:
+ *
+ *  - styles are specified as opaque JS expressions, or interpolated template strings;
+ *  - spread attributes are included along with styles (spreads might include a &quot;style&quot; property).
+ *
+ * As in React, style attributes and shorthands are evaluated left-to-right. We take care to ensure this order
+ * is preserved, even in the presence of spread attributes.
+ */
+module.exports = class StyleAttributeTransform {
+
+    static apply(path, state) {
+        const runtimeModule = `${state.opts.moduleName}/src/runtime/styles`;
+        const attributes = path.node.openingElement.attributes;
+        const styleItems = [];
+
+        // There are three types of relevant attributes: &quot;style&quot;, &quot;style-*&quot;, and spreads. All of these might include
+        // styles we must combine together. At the end of this transform, we must have only one &quot;style&quot; attribute, so
+        // we remove any &quot;style&quot; and &quot;style-*&quot; attributes here (spread attributes must remain intact).
+        for (let i = 0; i &lt; attributes.length; i++) {
+            const styleItem = StyleItem.fromAttribute(attributes[i], i);
+            if (styleItem) {
+                styleItems.push(styleItem);
+                if (!styleItem.isSpread) {
+                    attributes.splice(i--, 1);
+                }
+            }
+        }
+
+        // If there weren&apos;t any styles, or we only had one spread, leave the element as-is (we haven&apos;t changed it).
+        if (styleItems.length === 0 || (styleItems.length === 1 &amp;&amp; styleItems[0].isSpread)) {
+            return;
+        }
+
+        // Combine styles into as few items as possible (e.g. multiple shorthands can be combined into one object).
+        // NOTE: We cannot merge anything out-of-order, so a simple pairwise iteration is optimal.
+        for (let i = 1; i &lt; styleItems.length; i++) {
+            if (styleItems[i - 1].tryToMerge(styleItems[i])) {
+                styleItems.splice(i--, 1);
+            }
+        }
+
+        // If only one object-literal style item is left, we can just include a style attribute with that object.
+        // Otherwise, we need the runtime transform to combine the style items.
+        const value = styleItems.length === 1 &amp;&amp; t.isObjectExpression(styleItems[0].value)
+            ? styleItems[0].value
+            : t.callExpression(PathUtils.addImportOnce(path, &apos;default&apos;, runtimeModule, { nameHint: &apos;S&apos; }), styleItems.map(s =&gt; s.value));
+
+        // We insert the new (computed) style attribute at the end - it&apos;s important that it comes at the end because we don&apos;t
+        // want any spreads to override our computed style attribute. (Technically if there are no spreads, it would be safe to
+        // insert it earlier, but we&apos;ll just put it at the end for consistency).
+        attributes.push(t.jSXAttribute(t.jSXIdentifier(&apos;style&apos;), t.jSXExpressionContainer(value)));
+    }
+};
+
+/**
+ * A container representing one user-specified attribute related to styles. This includes &quot;style&quot;, &quot;style-*&quot;, and spreads.
+ */
+class StyleItem {
+
+    /** @private */
+    constructor(value, index, isSpread) {
+        this.value = value;
+        this.index = index;
+        this.isSpread = isSpread;
+    }
+
+    /**
+     * If `attr` is a style-related attribute, return a new StyleItem representing the attribute. Otherwise return null.
+     * @param {JSXAttribute|JSXSpreadAttribute} attr
+     * @param {number} index
+     * @return {StyleItem|null}
+     */
+    static fromAttribute(attr, index) {
+        // Spreads might contain a &quot;.style&quot; property, which we must extract.
+        if (t.isJSXSpreadAttribute(attr)) {
+            return new StyleItem(t.logicalExpression(&apos;||&apos;, t.memberExpression(attr.argument, t.identifier(&apos;style&apos;)), t.objectExpression([])), index, true);
+        }
+        const name = PathUtils.getJSXAttributeName(attr);
+        if (name === &apos;style&apos;) {
+            return new StyleItem(StyleItem.convertStringsToStyleObjects(StyleItem.simplifyStringLiteral(attr.value)), index);
+        }
+        // Expand `style-foo={...}` shorthands into `style={{ foo: ... }}` for simplicity.
+        else if (name.startsWith(&apos;style-&apos;)) {
+            const key = t.stringLiteral(camelCaseHyphens(name.slice(6)));
+            const value = t.objectExpression([ t.objectProperty(key, StyleItem.simplifyStringLiteral(attr.value)) ]);
+            return new StyleItem(value, index);
+        }
+        else {
+            return null;
+        }
+    }
+
+    /**
+     * Attempt to merge another StyleItem&apos;s value into this one. We can do this if both are ObjectExpressions whose keys
+     * are simple strings or identifiers. Return true if `other` was merged into this.
+     * @param {StyleItem} other
+     * @return {boolean}
+     */
+    tryToMerge(other) {
+        // We can only combine these if they are both object literals (and not spreads).
+        if (this.isSpread || other.isSpread || !t.isObjectExpression(this.value) || !t.isObjectExpression(other.value)) {
+            return false;
+        }
+        // Start combining the objects. If we run into object keys that aren&apos;t strings/identifiers, we must abort, since
+        // we can&apos;t safely merge them.
+        let result = new Map();
+        for (let prop of this.value.properties) {
+            if (!(t.isStringLiteral(prop.key) || t.isIdentifier(prop.key))) {
+                return false;
+            }
+            result.set(prop.key.name || prop.key.value, prop);
+        }
+        for (let prop of other.value.properties) {
+            if (!(t.isStringLiteral(prop.key) || t.isIdentifier(prop.key))) {
+                return false;
+            }
+            result.set(prop.key.name || prop.key.value, prop);
+        }
+        // If we&apos;ve made it this far, the objects are safe to merge.
+        this.value.properties = Array.from(result.values());
+        return true;
+    }
+
+    /**
+     * If given a string or StringLiteral, parse it as a CSS string and transform it into an ObjectExpression,
+     * returning other nodes unchanged.
+     * @param {Node} s
+     * @return {Node|ObjectExpression}
+     */
+    static convertStringsToStyleObjects(s) {
+        if (t.isStringLiteral(s)) {
+            s = s.value;
+        }
+        if (typeof s !== &apos;string&apos;) {
+            return s;
+        }
+        const properties = [];
+        const obj = styles(s);
+        for (let key in obj) {
+            properties.push(t.objectProperty(t.stringLiteral(key), t.stringLiteral(obj[key].trim())));
+        }
+        return t.objectExpression(properties);
+    }
+
+    /**
+     * If possible, simplify an expression containing a statically-determinable string
+     * into a plain StringLiteral node. Otherwise return the original node.
+     *
+     * @param {Node} node
+     * @return {Node} A node that is more likely to be a StringLiteral.
+     */
+    static simplifyStringLiteral(node) {
+        if (t.isJSXExpressionContainer(node)) {
+            node = node.expression;
+        }
+        // Template strings can be converted if they don&apos;t perform any interpolation.
+        if (t.isTemplateLiteral(node) &amp;&amp; node.expressions.length === 0) {
+            return t.stringLiteral(node.quasis[0].value.cooked);
+        }
+        return node;
+    }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
