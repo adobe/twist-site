@@ -1,0 +1,32 @@
+{
+    "plugins": [
+        "devops",
+        "expandable-chapters-interactive",
+        "styled-blockquotes",
+        "codetabs",
+        "codesandbox",
+        "recently-updated",
+        "github-buttons",
+        "prism",
+        "-highlight"
+    ],
+    "pluginsConfig": {
+        "github-buttons": {
+            "buttons": [
+                {
+                    "user": "adobe",
+                    "repo": "twist-site",
+                    "type": "star",
+                    "size": "small"
+                },
+                {
+                    "user": "adobe",
+                    "type": "follow",
+                    "width": "130",
+                    "count": false,
+                    "size": "small"
+                }
+            ]
+        }
+    }
+}
