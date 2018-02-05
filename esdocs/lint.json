@@ -43,5 +43,39 @@
     "docParams": [
       "path"
     ]
+  },
+  {
+    "name": "BaseLayoutComponent#layoutAttributes",
+    "filePath": "@twist/virtual-scroller/src/layout/BaseLayoutComponent.jsx",
+    "lines": [
+      {
+        "lineNumber": 69,
+        "line": "    /**"
+      },
+      {
+        "lineNumber": 70,
+        "line": "     * Begin watching the specified observable attributes, triggering `setNeedsLayout()` when they change."
+      },
+      {
+        "lineNumber": 71,
+        "line": "     *"
+      },
+      {
+        "lineNumber": 72,
+        "line": "     * @param {...WatchFunction } funcs A function that references an observable, for passing to `.watch()`."
+      },
+      {
+        "lineNumber": 73,
+        "line": "     */"
+      },
+      {
+        "lineNumber": 74,
+        "line": "    layoutAttributes() {"
+      }
+    ],
+    "codeParams": [],
+    "docParams": [
+      "funcs"
+    ]
   }
 ]
