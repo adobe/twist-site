@@ -26,13 +26,13 @@ module.exports = {
                     site: 'http://adobe.github.io/twist',
                     author: 'https://twitter.com/adobe'
                     //"image": "http://my-library.org/logo.png"
-                }, /*
+                } /*
                 manual: {
                     index: './docs/core/README.md',
                     globalIndex: true,
                     //asset: './docs/asset',
                     files: shell.find(DOCS_PATH).filter(file => file.match(/\.md/))
-                }, */
+                }, */,
                 test: {
                     source: './node_modules/@twist',
                     interfaces: ['describe', 'it', 'context', 'suite', 'test'],
@@ -44,6 +44,9 @@ module.exports = {
         {
             name: 'esdoc-ecmascript-proposal-plugin',
             option: { all: true }
+        },
+        {
+            name: 'esdoc-publish-markdown-plugin'
         }
     ]
 };

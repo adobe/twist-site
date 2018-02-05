@@ -11,7 +11,8 @@
     "site:build": "gitbook build site",
     "site:serve": "gitbook serve site",
     "ghpages:deploy": "gh-pages -d site/_book",
-    "build": "npm run site:install && npm run site:build && npm run esdoc:build"
+    "build": "npm run site:install && npm run docs:munge && npm run site:build && npm run esdoc:build",
+    "update": "rimraf node_modules/@twist && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -32,18 +33,22 @@
   },
   "homepage": "https://github.com/adobe/twist-site#readme",
   "devDependencies": {
-    "@twist/babel-plugin-transform": "^0.1.0",
-    "@twist/babel-plugin-transform-react": "^0.1.4",
-    "@twist/configuration": "^0.1.0",
-    "@twist/core": "^0.1.2",
-    "@twist/eslint-plugin-core": "^0.1.2",
-    "@twist/react": "^0.1.5",
-    "@twist/react-webpack-plugin": "^0.1.3",
+    "@twist/babel-plugin-transform": "adobe/babel-plugin-transform-twist",
+    "@twist/babel-plugin-transform-react": "adobe/babel-plugin-transform-react-twist",
+    "@twist/configuration": "adobe/twist-configuration",
+    "@twist/core": "adobe/twist",
+    "@twist/eslint-plugin-core": "adobe/eslint-plugin-twist",
+    "@twist/react": "adobe/react-twist",
+    "@twist/react-webpack-plugin": "adobe/react-twist-webpack-plugin",
+    "@twist/router": "adobe/twist-router",
+    "@twist/virtual-scroller": "adobe/twist-virtual-scroller",
     "esdoc": "^1.0.4",
     "esdoc-ecmascript-proposal-plugin": "^1.0.0",
+    "esdoc-publish-markdown-plugin": "^1.0.0",
     "esdoc-standard-plugin": "^1.0.0",
     "gh-pages": "^1.1.0",
     "gitbook-cli": "^2.3.2",
+    "rimraf": "^2.6.2",
     "shelljs": "^0.8.1"
   },
   "dependencies": {}

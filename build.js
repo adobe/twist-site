@@ -78,7 +78,7 @@ function fixDocs() {
  */
 function buildSummary() {
 
-    let libraries = shell.find(path.join(DOCS_PATH, 'ecosystem', 'libraries', '**', 'index.md'));
+    let libraries = shell.find(path.join(DOCS_PATH, 'ecosystem', 'libraries', '**', 'SUMMARY.md'));
     if (libraries && !libraries.stderr) {
         libraries = libraries.map(file => 
             shell.cat(file).replace(/\.\//g, path.dirname(file).replace('site/', './') + path.sep)
