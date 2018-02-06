@@ -273,6 +273,20 @@ Ensure any classes decorated with @Component have (props, context) as constructo
 
 ## `exports`
 
+### `apply(path: *)`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| path | * | nullable: undefined |
+
+### `addForceUpdateProperty(path: *): *`
+
+| Name | Type | Attribute | Description |
+| --- | --- | --- | --- |
+| path | * | nullable: undefined |
+
+## `exports`
+
 ### `apply(path: *): boolean`
 
 | Name | Type | Attribute | Description |

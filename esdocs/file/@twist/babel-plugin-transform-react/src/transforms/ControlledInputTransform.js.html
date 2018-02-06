@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../../../../">
-  <title data-ice="title">@twist/react/src/decorators/Component.jsx | Twist</title>
+  <title data-ice="title">@twist/babel-plugin-transform-react/src/transforms/ControlledInputTransform.js | Twist</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -83,9 +83,9 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">@twist/react/src/decorators/Component.jsx</h1>
+<div class="content" data-ice="content"><h1 data-ice="title">@twist/babel-plugin-transform-react/src/transforms/ControlledInputTransform.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/*
- *  Copyright 2016 Adobe Systems Incorporated. All rights reserved.
+ *  Copyright 2017 Adobe Systems Incorporated. All rights reserved.
  *  This file is licensed to you under the Apache License, Version 2.0 (the &quot;License&quot;);
  *  you may not use this file except in compliance with the License. You may obtain a copy
  *  of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -97,50 +97,61 @@
  *
  */
 
-import PropTypes from &apos;prop-types&apos;;
-import { addAttribute, getEventHandler } from &apos;../internal/AttributeUtils&apos;;
-import DecoratorUtils from &apos;@twist/core/src/internal/utils/DecoratorUtils&apos;;
+const t = require(&apos;babel-types&apos;);
+const PathUtils = require(&apos;@twist/babel-plugin-transform/src/PathUtils&apos;);
+const template = require(&apos;babel-template&apos;);
 
-// Supported options of @Component, with their default values
-let DEFAULT_OPTIONS = {
-    fork: true,
-    events: []
-};
+// For now, we just call the function inside the new function. We could be cleverer in the
+// case where it&apos;s an arrow function, so that we combine the two functions together.
+const handlerTemplate = template(`e =&gt; (this[NAME]=false, FN(e), this[NAME]=true)`);
+const elementsToTransform = [ &apos;input&apos;, &apos;select&apos;, &apos;textarea&apos; ];
 
-export default DecoratorUtils.makeClassDecorator((target, args = {}) =&gt; {
+module.exports = class ControlledInputTransform {
+    static apply(path) {
 
-    // Set the properties passed in via the @Component arguments (or use the default value)
-    Object.keys(DEFAULT_OPTIONS).forEach(key =&gt; {
-        let value = args.hasOwnProperty(key) ? args[key] : DEFAULT_OPTIONS[key];
-        if (key === &apos;events&apos;) {
-            // Special case for events, since we need to concatenate them with events from the superclass
-            target.prototype[key] = (target.prototype[key] || []).concat(value);
+        // It&apos;s possible that this node gets revisited again (e.g. due to any functions we inject being hoisted),
+        // so we need to be careful to avoid getting into an infinite loop. We mark the node as having had its
+        // refs transformed already, so that we guarantee that this transform only ever runs once.
+        if (path.getData(&apos;controlledInputTransformApplied&apos;)) {
+            return;
         }
-        else {
-            target.prototype[key] = value;
+        path.setData(&apos;controlledInputTransformApplied&apos;, true);
+
+        // Abort if this class isn&apos;t decorated with a decorator that ends with Component (e.g. @Component or @VirtualComponent)
+        let classDeclaration = PathUtils.findParentClassWithDecorator(path, /Component$/);
+        if (!classDeclaration) {
+            return;
         }
-    });
 
-    // If the user passed in properties we don&apos;t recognise, emit a warning
-    Object.keys(args).forEach(key =&gt; {
-        if (!DEFAULT_OPTIONS.hasOwnProperty(key)) {
-            console.warn(`${key} is not a valid option for @Component - ignoring.`);
+        const jsxName = PathUtils.getJSXElementName(path);
+        const onChangeAttribute = PathUtils.getAttributeValue(path, &apos;onChange&apos;);
+
+        // Check for an onChange event listener for controlled form elements.
+        // These need to tell React-Twist to immediately update during the onChange event,
+        // otherwise React will re-render with the old value before rendering again with the
+        // new (which throws off a lot of stuff like the cursor position).
+        if (elementsToTransform.includes(jsxName) &amp;&amp; onChangeAttribute) {
+            let fn = onChangeAttribute.expression;
+            onChangeAttribute.expression = handlerTemplate({
+                FN: fn,
+                NAME: this.addForceUpdateProperty(path)
+            }).expression;
         }
-    });
-
-    // Make sure event handlers are defined
-    target.prototype.events &amp;&amp; target.prototype.events.forEach(eventName =&gt; {
-        addAttribute(target.prototype, getEventHandler(eventName), PropTypes.func);
-    });
-
-    // Allow scope in the context (both to be passed down and received)
-    target.contextTypes = target.contextTypes || {};
-    target.contextTypes.scope = PropTypes.object;
-    if (target.prototype.fork) {
-        target.childContextTypes = target.childContextTypes || {};
-        target.childContextTypes.scope = PropTypes.object;
     }
-});
+
+    static addForceUpdateProperty(path) {
+        // Note: We&apos;re using throttleUpdates as the property name for now - we could change that
+        // later to a symbol, e.g. using Symbol.for(&apos;throttleUpdates&apos;).
+        const parent = path.scope.getProgramParent().path;
+        let localName = parent.scope.getData(&apos;throttleUpdatesProperty&apos;);
+        if (!localName) {
+            localName = path.scope.generateUidIdentifier(&apos;t&apos;);
+            parent.scope.push({ id: localName, init: t.stringLiteral(&apos;throttleUpdates&apos;) });
+            parent.scope.setData(&apos;throttleUpdatesProperty&apos;, localName);
+        }
+        return localName;
+    }
+};
 </code></pre>
 
 </div>

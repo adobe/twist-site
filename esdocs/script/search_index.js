@@ -906,6 +906,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "@twist/babel-plugin-transform-react/src/transforms/controlledinputtransform.js",
+    "file/@twist/babel-plugin-transform-react/src/transforms/ControlledInputTransform.js.html",
+    "@twist/babel-plugin-transform-react/src/transforms/ControlledInputTransform.js",
+    "file"
+  ],
+  [
     "@twist/babel-plugin-transform-react/src/transforms/namedchildrentransform.js",
     "file/@twist/babel-plugin-transform-react/src/transforms/NamedChildrenTransform.js.html",
     "@twist/babel-plugin-transform-react/src/transforms/NamedChildrenTransform.js",
@@ -1297,13 +1303,13 @@ window.esdocSearchIndex = [
   ],
   [
     "@twist/core/src/observablearray.jsx~observablearray#length",
-    "class/@twist/core/src/ObservableArray.jsx~ObservableArray.html#instance-set-length",
+    "class/@twist/core/src/ObservableArray.jsx~ObservableArray.html#instance-get-length",
     "@twist/core/src/ObservableArray.jsx~ObservableArray#length",
     "member"
   ],
   [
     "@twist/core/src/observablearray.jsx~observablearray#length",
-    "class/@twist/core/src/ObservableArray.jsx~ObservableArray.html#instance-get-length",
+    "class/@twist/core/src/ObservableArray.jsx~ObservableArray.html#instance-set-length",
     "@twist/core/src/ObservableArray.jsx~ObservableArray#length",
     "member"
   ],
@@ -2083,13 +2089,13 @@ window.esdocSearchIndex = [
   ],
   [
     "@twist/react/src/basecomponent.jsx~component#props",
-    "class/@twist/react/src/BaseComponent.jsx~Component.html#instance-get-props",
+    "class/@twist/react/src/BaseComponent.jsx~Component.html#instance-set-props",
     "@twist/react/src/BaseComponent.jsx~Component#props",
     "member"
   ],
   [
     "@twist/react/src/basecomponent.jsx~component#props",
-    "class/@twist/react/src/BaseComponent.jsx~Component.html#instance-set-props",
+    "class/@twist/react/src/BaseComponent.jsx~Component.html#instance-get-props",
     "@twist/react/src/BaseComponent.jsx~Component#props",
     "member"
   ],
@@ -3145,13 +3151,13 @@ window.esdocSearchIndex = [
   ],
   [
     "",
-    "test-file/@twist/core/test/BinderTest.jsx.html#lineNumber148",
+    "test-file/@twist/core/test/BinderTest.jsx.html#lineNumber116",
     "Bindings.Binder previous bindings should be disposed when a value changes",
     "test"
   ],
   [
     "",
-    "test-file/@twist/core/test/BinderTest.jsx.html#lineNumber116",
+    "test-file/@twist/core/test/BinderTest.jsx.html#lineNumber148",
     "Bindings.Binder previous bindings should be disposed when a value changes",
     "test"
   ],
@@ -3415,13 +3421,13 @@ window.esdocSearchIndex = [
   ],
   [
     "",
-    "test-file/@twist/core/test/decorators/MutableStoreTest.jsx.html#lineNumber45",
+    "test-file/@twist/core/test/decorators/StoreTest.jsx.html#lineNumber47",
     "Tests",
     "test"
   ],
   [
     "",
-    "test-file/@twist/core/test/decorators/StoreTest.jsx.html#lineNumber47",
+    "test-file/@twist/core/test/decorators/MutableStoreTest.jsx.html#lineNumber45",
     "Tests",
     "test"
   ],
@@ -3505,13 +3511,13 @@ window.esdocSearchIndex = [
   ],
   [
     "",
-    "test-file/@twist/core/test/decorators/StoreTest.jsx.html#lineNumber690",
+    "test-file/@twist/core/test/decorators/StoreTest.jsx.html#lineNumber324",
     "Tests Store with double-nested state - action dispatched to sub-store should pass through parent middleware",
     "test"
   ],
   [
     "",
-    "test-file/@twist/core/test/decorators/StoreTest.jsx.html#lineNumber324",
+    "test-file/@twist/core/test/decorators/StoreTest.jsx.html#lineNumber690",
     "Tests Store with double-nested state - action dispatched to sub-store should pass through parent middleware",
     "test"
   ],

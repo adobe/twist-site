@@ -108,6 +108,7 @@ const NamedChildrenTransform = require(&apos;./transforms/NamedChildrenTransform
 const ComponentImportTransform = require(&apos;@twist/babel-plugin-transform/src/transforms/ComponentImportTransform&apos;);
 const DecoratorImportTransform = require(&apos;@twist/babel-plugin-transform/src/transforms/DecoratorImportTransform&apos;);
 const ArrowLiftingTransform = require(&apos;./transforms/ArrowLiftingTransform&apos;);
+const ControlledInputTransform = require(&apos;./transforms/ControlledInputTransform&apos;);
 
 const OPTIONS = {
     refAttribute: true,
@@ -119,6 +120,7 @@ const OPTIONS = {
     asAttribute: true,
     bindAttribute: true,
     arrowLifting: true,
+    controlledInput: true,
     autoImport: {},
     moduleName: &apos;@twist/babel-plugin-transform-react&apos;,
 };
@@ -166,6 +168,10 @@ const programVisitor = (path, state, options) =&gt; ({
 
         if (options.bindAttribute) {
             BindAttributeTransform.apply(path, state);
+        }
+
+        if (options.controlledInput) {
+            ControlledInputTransform.apply(path, state);
         }
 
         if (options.arrowLifting) {
