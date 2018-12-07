@@ -46,7 +46,7 @@
     "esdoc-ecmascript-proposal-plugin": "^1.0.0",
     "esdoc-publish-markdown-plugin": "^1.0.0",
     "esdoc-standard-plugin": "^1.0.0",
-    "gh-pages": "^1.1.0",
+    "gh-pages": "^2.0.1",
     "gitbook-cli": "^2.3.2",
     "rimraf": "^2.6.2",
     "shelljs": "^0.8.1"
